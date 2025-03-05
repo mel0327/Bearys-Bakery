@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c06ohx8a0a05h"]
+[gd_scene load_steps=6 format=3 uid="uid://csnmgjyvbm5c"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bpgu4"]
 [ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://bunny.png" id="2_medtd"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_egeio"]
-[ext_resource type="PackedScene" uid="uid://hgnbitspxoym" path="res://weapon.tscn" id="4_1khfd"]
+[ext_resource type="PackedScene" path="res://weapon.tscn" id="4_1khfd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu2ak"]
 radius = 166.676
