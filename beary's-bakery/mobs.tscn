@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://xi810joianus"]
+
+[ext_resource type="Script" path="res://mobs.gd" id="1_2atfb"]
+[ext_resource type="Texture2D" uid="uid://ciq8ilq22p0rq" path="res://hamster.png" id="1_qlhft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks5l3"]
+size = Vector2(250, 359)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8b66"]
+radius = 657.709
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4lmq"]
+size = Vector2(134, 191)
+
+[node name="Mobs" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_2atfb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qlhft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ks5l3")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_c8b66")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(57, 85.5)
+shape = SubResource("RectangleShape2D_r4lmq")
