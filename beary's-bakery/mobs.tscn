@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xi810joianus"]
+[gd_scene load_steps=6 format=3 uid="uid://dsu2ylq3yelpp"]
 
 [ext_resource type="Script" path="res://mobs.gd" id="1_2atfb"]
 [ext_resource type="Texture2D" uid="uid://ciq8ilq22p0rq" path="res://hamster.png" id="1_qlhft"]
