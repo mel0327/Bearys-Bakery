@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4h3qwfkog4s6"]
+[gd_scene load_steps=7 format=3 uid="uid://d4h3qwfkog4s6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bpgu4"]
 [ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://bunny.png" id="2_medtd"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_egeio"]
-[ext_resource type="PackedScene" path="res://weapon.tscn" id="4_1khfd"]
+[ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://weapon.tscn" id="4_1khfd"]
+[ext_resource type="Script" path="res://weapon_pivot.gd" id="4_jxq5n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu2ak"]
 radius = 136.015
@@ -19,8 +20,10 @@ script = ExtResource("3_egeio")
 shape = SubResource("CircleShape2D_hu2ak")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
+script = ExtResource("4_jxq5n")
 
 [node name="Marker2D" type="Marker2D" parent="WeaponPivot"]
 
 [node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_1khfd")]
+position = Vector2(50, 0)
 scale = Vector2(0.25, 0.25)

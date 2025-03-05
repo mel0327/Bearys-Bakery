@@ -18,3 +18,4 @@ func shoot() -> void:
 	bullet.global_rotation = global_rotation
 	bullet.max_range = max_range
 	bullet.speed = max_bullet_speed
+	
