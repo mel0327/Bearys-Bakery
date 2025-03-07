@@ -12,8 +12,3 @@ func _process(delta: float) -> void:
 			texture = SPRITE_RIGHT
 	if direction_discrete.length() > 0:
 		flip_h = input_direction.x < 0.0
-
-
-
-func _ready() -> void:
-	pass
