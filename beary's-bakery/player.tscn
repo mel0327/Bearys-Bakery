@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4h3qwfkog4s6"]
+[gd_scene load_steps=9 format=3 uid="uid://d4h3qwfkog4s6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bpgu4"]
 [ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://bunny.png" id="2_medtd"]
@@ -9,6 +9,29 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu2ak"]
 radius = 136.015
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_137ye"]
+bg_color = Color(0, 0, 0, 0.564706)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_galb8"]
+bg_color = Color(0.768432, 0.933258, 0.976133, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_bpgu4")
 
@@ -17,6 +40,7 @@ texture = ExtResource("2_medtd")
 script = ExtResource("3_egeio")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_hu2ak")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
@@ -27,3 +51,14 @@ script = ExtResource("4_jxq5n")
 [node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_1khfd")]
 position = Vector2(50, 0)
 scale = Vector2(0.25, 0.25)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 100.0
+offset_bottom = -170.0
+theme_override_styles/background = SubResource("StyleBoxFlat_137ye")
+theme_override_styles/fill = SubResource("StyleBoxFlat_galb8")
+value = 50.0
+show_percentage = false
