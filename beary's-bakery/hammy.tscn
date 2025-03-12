@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxu755suyt7ne"]
+
+[ext_resource type="Texture2D" uid="uid://bw5okuuanmp3v" path="res://hammy1.png" id="1_2stxe"]
+[ext_resource type="Script" path="res://hammy.gd" id="1_l3e5u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xtrl1"]
+radius = 33.5
+height = 139.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5s8v"]
+radius = 201.921
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tu8y"]
+radius = 33.0
+height = 144.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ci25o"]
+bg_color = Color(0.135012, 0.135012, 0.135012, 0.988235)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsp00"]
+bg_color = Color(1, 0.306829, 0.525874, 0.988235)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Hammy" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_l3e5u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10.5, -31.5)
+scale = Vector2(0.0286133, 0.0270508)
+texture = ExtResource("1_2stxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("CapsuleShape2D_xtrl1")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_n5s8v")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CapsuleShape2D_1tu8y")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -74.0
+offset_top = -106.0
+offset_right = 71.0
+offset_bottom = -88.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ci25o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gsp00")
+value = 50.0
+show_percentage = false

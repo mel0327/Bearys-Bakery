@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsu2ylq3yelpp"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_2atfb"]
+[ext_resource type="Texture2D" uid="uid://bw5okuuanmp3v" path="res://hammy1.png" id="2_177hm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agoux"]
+radius = 86.0
+height = 307.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8b66"]
+radius = 657.709
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ak31r"]
+radius = 86.0
+height = 292.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihnmd"]
+bg_color = Color(0.135012, 0.135012, 0.135012, 0.988235)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boxkp"]
+bg_color = Color(1, 0.306829, 0.525874, 0.988235)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Mob" type="CharacterBody2D"]
+position = Vector2(302, 324)
+motion_mode = 1
+script = ExtResource("1_2atfb")
+max_speed = null
+acceleration = null
+health = null
+damage = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, -87.5)
+scale = Vector2(0.0539062, 0.059082)
+texture = ExtResource("2_177hm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("CapsuleShape2D_agoux")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_c8b66")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CapsuleShape2D_ak31r")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -84.0
+offset_top = -224.0
+offset_right = 61.0
+offset_bottom = -206.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ihnmd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_boxkp")
+value = 50.0
+show_percentage = false
