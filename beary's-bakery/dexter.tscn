@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7m0nosbrg1ll"]
+
+[ext_resource type="Script" path="res://dexter.gd" id="1_trmh6"]
+[ext_resource type="Texture2D" uid="uid://6jv18jiavwrj" path="res://dog.png" id="2_yfsvd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hawo"]
+radius = 27.0
+height = 92.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smcl3"]
+radius = 104.695
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7v2qp"]
+radius = 29.0
+height = 92.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xq5o4"]
+bg_color = Color(0.135012, 0.135012, 0.135012, 0.988235)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fmfp"]
+bg_color = Color(1, 0.306829, 0.525874, 0.988235)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Dexter" type="CharacterBody2D"]
+script = ExtResource("1_trmh6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.5, -2.50001)
+scale = Vector2(0.209559, 0.325521)
+texture = ExtResource("2_yfsvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_4hawo")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_smcl3")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CapsuleShape2D_7v2qp")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -74.0
+offset_top = -106.0
+offset_right = 71.0
+offset_bottom = -88.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xq5o4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0fmfp")
+value = 50.0
+show_percentage = false
