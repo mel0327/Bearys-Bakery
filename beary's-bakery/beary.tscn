@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://q0in37xtjbdw"]
+[gd_scene load_steps=12 format=3 uid="uid://q0in37xtjbdw"]
 
 [ext_resource type="Script" path="res://beary.gd" id="1_1pxqb"]
 [ext_resource type="Texture2D" uid="uid://r747e54npjfm" path="res://bear.png" id="1_ooslv"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://350919__cabled_mess__hurt_c_05.wav" id="3_gl4eq"]
+[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://168567__psychentist__ratdeath.mp3" id="4_m04pg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kg4c4"]
 radius = 27.0
@@ -37,6 +39,15 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xegxk"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("3_gl4eq")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l02r2"]
+streams_count = 1
+stream_0/stream = ExtResource("4_m04pg")
+
 [node name="Beary" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_1pxqb")
@@ -69,3 +80,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_bxfsm")
 theme_override_styles/fill = SubResource("StyleBoxFlat_i4n0h")
 value = 50.0
 show_percentage = false
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_xegxk")
+volume_db = 6.0
+
+[node name="DieSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_l02r2")
+volume_db = 3.0

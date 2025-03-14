@@ -9,6 +9,8 @@ var _player: Player = null
 
 @onready var _detection_area: Area2D = %DetectionArea
 @onready var _hit_box: Area2D = %HitBox
+@onready var _hurt_sound: AudioStreamPlayer = %HurtSound
+@onready var _die_sound: AudioStreamPlayer = %DieSound
 
 
 func _ready() -> void:
@@ -44,6 +46,8 @@ func die() -> void:
 	collision_mask = 0
 	_hit_box.queue_free()
 
+	_die_sound.play()
+	_die_sound.finished.connect(queue_free)
 
 func _physics_process(delta: float) -> void:
 	if _player == null:

@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg5pmqh3hbu6y"]
+[gd_scene load_steps=12 format=3 uid="uid://bg5pmqh3hbu6y"]
 
 [ext_resource type="Texture2D" uid="uid://dve3kbquuqvvo" path="res://cats.png" id="1_6y7xx"]
 [ext_resource type="Script" path="res://james.gd" id="1_hr7db"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://350919__cabled_mess__hurt_c_05.wav" id="3_sr6qa"]
+[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://168567__psychentist__ratdeath.mp3" id="4_wwu6s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_su2o0"]
 radius = 37.0
@@ -37,6 +39,15 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_otl4e"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("3_sr6qa")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_j74ox"]
+streams_count = 1
+stream_0/stream = ExtResource("4_wwu6s")
+
 [node name="James" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_hr7db")
@@ -68,3 +79,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_y6he1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pfcqe")
 value = 50.0
 show_percentage = false
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_otl4e")
+volume_db = 6.0
+
+[node name="DieSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_j74ox")
+volume_db = 3.0

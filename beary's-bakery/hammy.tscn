@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxu755suyt7ne"]
+[gd_scene load_steps=12 format=3 uid="uid://bxu755suyt7ne"]
 
 [ext_resource type="Texture2D" uid="uid://bw5okuuanmp3v" path="res://hammy1.png" id="1_2stxe"]
 [ext_resource type="Script" path="res://hammy.gd" id="1_l3e5u"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
+[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xtrl1"]
 radius = 33.5
@@ -36,6 +38,15 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8fsst"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("3_805yl")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jqhl3"]
+streams_count = 1
+stream_0/stream = ExtResource("4_8u0u3")
 
 [node name="Hammy" type="CharacterBody2D"]
 motion_mode = 1
@@ -72,3 +83,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_ci25o")
 theme_override_styles/fill = SubResource("StyleBoxFlat_gsp00")
 value = 50.0
 show_percentage = false
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_8fsst")
+volume_db = 6.0
+
+[node name="DieSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_jqhl3")
+volume_db = 3.0
