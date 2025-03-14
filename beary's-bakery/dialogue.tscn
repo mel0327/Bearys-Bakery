@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://quiwl7n58fky"]
+
+[ext_resource type="Theme" uid="uid://butqi6d7xi41p" path="res://Dialogue/main_theme.tres" id="1_oq7am"]
+[ext_resource type="Script" path="res://dialogue.gd" id="1_vqvu4"]
+[ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://bunny.png" id="2_g63gt"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_erv3s"]
+action = &"advance_text"
+
+[sub_resource type="Shortcut" id="Shortcut_gn8ug"]
+events = [SubResource("InputEventAction_erv3s")]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oq7am")
+script = ExtResource("1_vqvu4")
+
+[node name="Character" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 11.0
+offset_top = 158.0
+offset_right = 273.0
+offset_bottom = 574.0
+texture = ExtResource("2_g63gt")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 162.0
+offset_right = -13.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+bbcode_enabled = true
+text = "DIALOGUE"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -90.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+shortcut = SubResource("Shortcut_gn8ug")
+text = "Next"
