@@ -29,7 +29,7 @@ var dialogue_items: Array[Dictionary] = [
 	},
 	{
 		"character": characters["Beary"],
-		"text": "wordsssssssss"
+		"text": "beary"
 	},
 	{
 		"character": characters["Dexter"],
