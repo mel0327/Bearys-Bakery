@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cahrmdjfpo7i4"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_l3i6r"]
+[ext_resource type="Theme" uid="uid://c82tb28ljds13" path="res://main_menu_theme.tres" id="1_ped78"]
+[ext_resource type="Texture2D" uid="uid://cumbi1csp653p" path="res://startbetaTest1.png" id="2_570il"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fss7q"]
+texture = ExtResource("2_570il")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3i6r")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fss7q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 93.0
+offset_top = -287.0
+offset_right = 328.0
+offset_bottom = -121.0
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ped78")
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ped78")
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ped78")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
