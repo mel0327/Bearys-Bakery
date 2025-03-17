@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://q0in37xtjbdw"]
 
 [ext_resource type="Script" path="res://beary.gd" id="1_1pxqb"]
-[ext_resource type="Texture2D" uid="uid://r747e54npjfm" path="res://Assets/bear.png" id="1_ooslv"]
-[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_gl4eq"]
-[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_m04pg"]
+[ext_resource type="Texture2D" uid="uid://r747e54npjfm" path="res://assets/bear.png" id="1_ooslv"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://sounds/350919__cabled_mess__hurt_c_05.wav" id="3_gl4eq"]
+[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://sounds/168567__psychentist__ratdeath.mp3" id="4_m04pg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kg4c4"]
 radius = 27.0

@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://dsu2ylq3yelpp"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_2atfb"]
-[ext_resource type="Texture2D" uid="uid://bw5okuuanmp3v" path="res://Assets/hammy1.png" id="2_177hm"]
-[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_s1ol3"]
-[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_in4be"]
+[ext_resource type="Texture2D" uid="uid://bw5okuuanmp3v" path="res://assets/hammy1.png" id="2_177hm"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://sounds/350919__cabled_mess__hurt_c_05.wav" id="3_s1ol3"]
+[ext_resource type="AudioStream" uid="uid://bt5ytwf1cyxsh" path="res://sounds/168567__psychentist__ratdeath.mp3" id="4_in4be"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agoux"]
 radius = 86.0

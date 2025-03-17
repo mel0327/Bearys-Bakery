@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b16f0ec5bcsgt"
-path="res://.godot/imported/409841__pipe98x__metales.wav-22bc3c15ad9bcca148cc2437a003d01c.sample"
+path="res://.godot/imported/409841__pipe98x__metales.wav-8b4786c97d65cab35c27ece200e05b04.sample"
 
 [deps]
 
-source_file="res://Sounds/409841__pipe98x__metales.wav"
-dest_files=["res://.godot/imported/409841__pipe98x__metales.wav-22bc3c15ad9bcca148cc2437a003d01c.sample"]
+source_file="res://sounds/409841__pipe98x__metales.wav"
+dest_files=["res://.godot/imported/409841__pipe98x__metales.wav-8b4786c97d65cab35c27ece200e05b04.sample"]
 
 [params]
 
