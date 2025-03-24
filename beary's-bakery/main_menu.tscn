@@ -37,7 +37,8 @@ offset_bottom = -121.0
 grow_vertical = 0
 theme_override_constants/separation = 20
 
-[node name="StartGameButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_ped78")
@@ -45,17 +46,19 @@ theme_override_font_sizes/font_size = 30
 text = "Start Game"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_ped78")
 text = "Options"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_ped78")
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
