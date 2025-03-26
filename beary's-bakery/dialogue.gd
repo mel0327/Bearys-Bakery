@@ -1,4 +1,4 @@
-extends Control
+class_name dialogue extends Control
 
 
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
