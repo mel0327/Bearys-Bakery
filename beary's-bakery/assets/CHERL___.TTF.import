@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://eacbv6qq2xxg"
-path="res://.godot/imported/CHERL___.TTF-b743fc5279e97edc097233338bb5ad9d.fontdata"
+path="res://.godot/imported/CHERL___.TTF-d4de954e090cadc79156d52452cb6fbf.fontdata"
 
 [deps]
 
-source_file="res://assets/CHERL___.TTF"
-dest_files=["res://.godot/imported/CHERL___.TTF-b743fc5279e97edc097233338bb5ad9d.fontdata"]
+source_file="res://Assets/CHERL___.TTF"
+dest_files=["res://.godot/imported/CHERL___.TTF-d4de954e090cadc79156d52452cb6fbf.fontdata"]
 
 [params]
 

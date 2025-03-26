@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://beu4188t4oxha"
-path="res://.godot/imported/492535__soundflakes__spear-penetration.wav-660e7caee35367482315325f2963033a.sample"
+path="res://.godot/imported/492535__soundflakes__spear-penetration.wav-d96ee100cdcdef4b528f18a6a03d39fd.sample"
 
 [deps]
 
-source_file="res://sounds/492535__soundflakes__spear-penetration.wav"
-dest_files=["res://.godot/imported/492535__soundflakes__spear-penetration.wav-660e7caee35367482315325f2963033a.sample"]
+source_file="res://Sounds/492535__soundflakes__spear-penetration.wav"
+dest_files=["res://.godot/imported/492535__soundflakes__spear-penetration.wav-d96ee100cdcdef4b528f18a6a03d39fd.sample"]
 
 [params]
 

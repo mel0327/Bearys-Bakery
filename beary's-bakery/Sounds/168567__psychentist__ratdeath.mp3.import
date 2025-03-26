@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bt5ytwf1cyxsh"
-path="res://.godot/imported/168567__psychentist__ratdeath.mp3-c4a7460638ae9b08743f624f78b80c65.mp3str"
+path="res://.godot/imported/168567__psychentist__ratdeath.mp3-5979fd0654b83dbc63e09245fdd8c017.mp3str"
 
 [deps]
 
-source_file="res://sounds/168567__psychentist__ratdeath.mp3"
-dest_files=["res://.godot/imported/168567__psychentist__ratdeath.mp3-c4a7460638ae9b08743f624f78b80c65.mp3str"]
+source_file="res://Sounds/168567__psychentist__ratdeath.mp3"
+dest_files=["res://.godot/imported/168567__psychentist__ratdeath.mp3-5979fd0654b83dbc63e09245fdd8c017.mp3str"]
 
 [params]
 

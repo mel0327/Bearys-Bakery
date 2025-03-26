@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp5x7qehk66td"]
+[gd_scene load_steps=6 format=3 uid="uid://dmuhxvssra8nw"]
 
 [ext_resource type="Script" path="res://pickup.gd" id="1_ilj2y"]
-[ext_resource type="Texture2D" uid="uid://ba0unipl3r8n0" path="res://green candy.png" id="2_0wjo4"]
+[ext_resource type="Texture2D" uid="uid://ba0unipl3r8n0" path="res://Assets/green candy.png" id="2_0wjo4"]
 [ext_resource type="Script" path="res://item_healing.gd" id="2_nbm36"]
 
 [sub_resource type="Resource" id="Resource_elvth"]
