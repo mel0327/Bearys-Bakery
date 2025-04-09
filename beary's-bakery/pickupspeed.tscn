@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://8kprld2q6fj4"]
+
+[ext_resource type="Script" path="res://pickup.gd" id="1_usflu"]
+[ext_resource type="Script" path="res://item_speed.gd" id="2_cfoi4"]
+[ext_resource type="Texture2D" uid="uid://g64cp5f5tfwa" path="res://Assets/Blue_Candy_PNG_Clipart.png" id="3_nynrh"]
+
+[sub_resource type="Resource" id="Resource_upu7b"]
+script = ExtResource("2_cfoi4")
+speed_amount = 1000
+display_name = ""
+texture = ExtResource("3_nynrh")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q6fbf"]
+radius = 16.1555
+
+[node name="PickupSpeed" type="Area2D"]
+script = ExtResource("1_usflu")
+item = SubResource("Resource_upu7b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(135, 140)
+scale = Vector2(0.00767188, 0.00784951)
+texture = ExtResource("3_nynrh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(135, 140)
+shape = SubResource("CircleShape2D_q6fbf")
