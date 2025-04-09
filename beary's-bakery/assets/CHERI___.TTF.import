@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dc3n16ntx6sr"
-path="res://.godot/imported/CHERI___.TTF-811ead18c3d0b5a947de71383a020a32.fontdata"
+path="res://.godot/imported/CHERI___.TTF-4851a45c6fd0282e9e2c2c0cce611314.fontdata"
 
 [deps]
 
-source_file="res://assets/CHERI___.TTF"
-dest_files=["res://.godot/imported/CHERI___.TTF-811ead18c3d0b5a947de71383a020a32.fontdata"]
+source_file="res://Assets/CHERI___.TTF"
+dest_files=["res://.godot/imported/CHERI___.TTF-4851a45c6fd0282e9e2c2c0cce611314.fontdata"]
 
 [params]
 
