@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://6huea8cg4bc4"]
+[gd_scene load_steps=4 format=3 uid="uid://6huea8cg4bc4"]
 
+[ext_resource type="Texture2D" uid="uid://bvxc5kufyf3wd" path="res://cafedraft2.png" id="1_3rakv"]
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://player.tscn" id="1_ar5ja"]
 [ext_resource type="PackedScene" uid="uid://dsu2ylq3yelpp" path="res://mob.tscn" id="2_nvqaj"]
 
 [node name="Test" type="Node2D"]
 
+[node name="Cafedraft2" type="Sprite2D" parent="."]
+position = Vector2(1742, 1296)
+scale = Vector2(6.978, 6.85)
+texture = ExtResource("1_3rakv")
+
 [node name="Player" parent="." instance=ExtResource("1_ar5ja")]
-position = Vector2(219, 302)
+position = Vector2(1018, 1309)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Mob" parent="." instance=ExtResource("2_nvqaj")]
-position = Vector2(965, 334)
+position = Vector2(1872, 1341)
