@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://quiwl7n58fky"]
 
 [ext_resource type="Script" path="res://dialogue.gd" id="1_vqvu4"]
-[ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://Assets/bunny.png" id="2_g63gt"]
+[ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://bunny.png" id="2_g63gt"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_erv3s"]
 action = &"advance_text"
