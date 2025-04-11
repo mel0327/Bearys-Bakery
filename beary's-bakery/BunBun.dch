@@ -17,7 +17,7 @@
 "portraits": {
 "BunBun": {
 "export_overrides": {
-"image": "\"bunny.png\""
+"image": "\"res://Assets/bunny.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
