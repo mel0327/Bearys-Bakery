@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d4h3qwfkog4s6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bpgu4"]
-[ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://Assets/bunny.png" id="2_medtd"]
+[ext_resource type="Texture2D" uid="uid://b51yun36y3lf0" path="res://bunny.png" id="2_medtd"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_egeio"]
 [ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://weapon.tscn" id="4_1khfd"]
 [ext_resource type="Script" path="res://weapon_pivot.gd" id="4_jxq5n"]

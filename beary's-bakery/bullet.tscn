@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3hmc7aoapar2"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_gr6fk"]
-[ext_resource type="Texture2D" uid="uid://dg58ncuca0evn" path="res://Assets/cake.webp" id="2_ruoff"]
+[ext_resource type="Texture2D" uid="uid://72f3bd7gi28" path="res://cake.webp" id="2_ruoff"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lupxo"]
 
