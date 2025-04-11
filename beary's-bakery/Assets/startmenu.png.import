@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfsj64poc84in"
-path="res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bjs38p2m2lm7u"
+valid=false
 
 [deps]
 
-source_file="res://Assets/bunny.png"
-dest_files=["res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"]
+source_file="res://Assets/startmenu.png"
 
 [params]
 

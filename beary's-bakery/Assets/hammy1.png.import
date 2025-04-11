@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfsj64poc84in"
-path="res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"
+uid="uid://bw5okuuanmp3v"
+path="res://.godot/imported/hammy1.png-14fe4c0147e02822b4f7d71d5e356a32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bunny.png"
-dest_files=["res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"]
+source_file="res://Assets/hammy1.png"
+dest_files=["res://.godot/imported/hammy1.png-14fe4c0147e02822b4f7d71d5e356a32.ctex"]
 
 [params]
 

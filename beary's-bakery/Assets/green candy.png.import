@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfsj64poc84in"
-path="res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"
+uid="uid://ba0unipl3r8n0"
+path="res://.godot/imported/green candy.png-5797908c22a56653c86526a1fc59d941.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bunny.png"
-dest_files=["res://.godot/imported/bunny.png-6d62db584ab4ec3c785408acb060e7f4.ctex"]
+source_file="res://Assets/green candy.png"
+dest_files=["res://.godot/imported/green candy.png-5797908c22a56653c86526a1fc59d941.ctex"]
 
 [params]
 
