@@ -25,10 +25,7 @@ directories/dch_directory={
 "Beary": "res://Beary.dch",
 "BunBun": "res://BunBun.dch"
 }
-directories/dtl_directory={
-"day1": "res://day1.dtl",
-"opening": "res://opening.dtl"
-}
+directories/dtl_directory={}
 layout/style_list=["res://Style.tres"]
 layout/default_style="res://Style.tres"
 glossary/default_case_sensitive=true

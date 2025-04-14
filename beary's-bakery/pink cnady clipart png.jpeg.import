@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brw7atihduqta"
-path="res://.godot/imported/pink cnady clipart png.jpeg-a76ece6d418fcef91398414955cb14b9.ctex"
+path="res://.godot/imported/pink cnady clipart png.jpeg-a5f6c71ed0b8059713c795d6dd3b8edb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pink cnady clipart png.jpeg"
-dest_files=["res://.godot/imported/pink cnady clipart png.jpeg-a76ece6d418fcef91398414955cb14b9.ctex"]
+source_file="res://pink cnady clipart png.jpeg"
+dest_files=["res://.godot/imported/pink cnady clipart png.jpeg-a5f6c71ed0b8059713c795d6dd3b8edb.ctex"]
 
 [params]
 
