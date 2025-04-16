@@ -25,7 +25,9 @@ directories/dch_directory={
 "Beary": "res://Beary.dch",
 "BunBun": "res://BunBun.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"opening": "res://opening.dtl"
+}
 layout/style_list=["res://Style.tres"]
 layout/default_style="res://Style.tres"
 glossary/default_case_sensitive=true
@@ -55,6 +57,7 @@ audio/max_channels=4.0
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/glossary_files=["res://glossary.tres"]
 
 [editor_plugins]
 
