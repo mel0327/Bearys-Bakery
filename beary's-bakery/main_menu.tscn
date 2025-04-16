@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://q8i4rhigp7s1"]
+[gd_scene load_steps=4 format=3 uid="uid://q8i4rhigp7s1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_l3i6r"]
+[ext_resource type="Texture2D" uid="uid://bdiequ3i6lg24" path="res://Assets/startbetaTest1.png" id="2_e1twl"]
 [ext_resource type="PackedScene" uid="uid://cmn230kak7r3m" path="res://options_menu.tscn" id="4_46ud3"]
 
 [node name="MainMenu" type="Control"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_e1twl")
 expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
