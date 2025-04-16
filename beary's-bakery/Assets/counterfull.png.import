@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpgvql0gesu0f"
-path="res://.godot/imported/cafedraft2.png-70e4080ec18755cf356dfe51a2714661.ctex"
+uid="uid://cgnjiwgwneb5l"
+path="res://.godot/imported/counterfull.png-a65e31009facadc0a3fd444a9c381ff8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cafedraft2.png"
-dest_files=["res://.godot/imported/cafedraft2.png-70e4080ec18755cf356dfe51a2714661.ctex"]
+source_file="res://Assets/counterfull.png"
+dest_files=["res://.godot/imported/counterfull.png-a65e31009facadc0a3fd444a9c381ff8.ctex"]
 
 [params]
 

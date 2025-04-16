@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g64cp5f5tfwa"
-path="res://.godot/imported/Blue_Candy_PNG_Clipart.png-c66f998fdcf1f73a9edaadedc77f396c.ctex"
+uid="uid://byew0afsxnpt5"
+path="res://.godot/imported/Green_Candy_PNG_Clipart.png-5cb5704f634a5c7e2a7db69454e2897a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Blue_Candy_PNG_Clipart.png"
-dest_files=["res://.godot/imported/Blue_Candy_PNG_Clipart.png-c66f998fdcf1f73a9edaadedc77f396c.ctex"]
+source_file="res://Assets/Green_Candy_PNG_Clipart.png"
+dest_files=["res://.godot/imported/Green_Candy_PNG_Clipart.png-5cb5704f634a5c7e2a7db69454e2897a.ctex"]
 
 [params]
 
