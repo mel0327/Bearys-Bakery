@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://q8i4rhigp7s1"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_l3i6r"]
-[ext_resource type="PackedScene" uid="uid://bgt2en30jobnm" path="res://options_menu.tscn" id="4_46ud3"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_l3i6r"]
+[ext_resource type="PackedScene" uid="uid://cmn230kak7r3m" path="res://options_menu.tscn" id="4_46ud3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -53,7 +53,6 @@ text = "Exit"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("4_46ud3")]
 layout_mode = 1
-script = null
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

@@ -1,4 +1,4 @@
-extends "res://mob.gd"
+extends "res://Scripts/mob.gd"
 
 func _ready() -> void:
 	health = 50.0

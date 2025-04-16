@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxu755suyt7ne"]
 
 [ext_resource type="Texture2D" path="res://hammy1.png" id="1_2stxe"]
-[ext_resource type="Script" path="res://hammy.gd" id="1_l3e5u"]
+[ext_resource type="Script" path="res://Scripts/hammy.gd" id="1_l3e5u"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
 

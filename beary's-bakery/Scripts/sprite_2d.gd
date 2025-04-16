@@ -1,6 +1,6 @@
 extends Sprite2D
 
-const SPRITE_RIGHT := preload("res://bunny.png")
+const SPRITE_RIGHT := preload("res://Assets/bunny.png")
 
 
 
