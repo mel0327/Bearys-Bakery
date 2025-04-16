@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_bpgu4"]
 [ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://Assets/bunny.png" id="2_medtd"]
 [ext_resource type="Script" path="res://Scripts/sprite_2d.gd" id="3_egeio"]
-[ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://weapon.tscn" id="4_1khfd"]
+[ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://Scenes/weapon.tscn" id="4_1khfd"]
 [ext_resource type="Script" path="res://Scripts/weapon_pivot.gd" id="4_jxq5n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu2ak"]
