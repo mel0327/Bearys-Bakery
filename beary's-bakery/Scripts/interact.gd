@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@onready var play_dialogue = preload("res://dialogue_2.tscn")
+@onready var play_dialogue = preload("res://Scenes/dialogue_2.tscn")
 
 var is_player_near := false
 

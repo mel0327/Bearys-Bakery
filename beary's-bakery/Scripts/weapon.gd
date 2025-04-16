@@ -1,6 +1,6 @@
 class_name Weapon extends Node2D
 
-@export var bullet_scene: PackedScene = preload("res://bullet.tscn")
+@export var bullet_scene: PackedScene = preload("res://Scenes/bullet.tscn")
 
 @export_range(0.0, 360.0, 1.0, "radians_as_degrees") var random_angle:= PI / 12.0
 @export_range(100.0, 2000.0, 1.0) var max_range := 2000.0

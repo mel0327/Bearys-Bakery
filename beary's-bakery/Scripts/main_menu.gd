@@ -6,7 +6,7 @@ extends Control
 @onready var options_button = %OptionsButton as Button
 @onready var options_menu = $OptionsMenu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
-@onready var start_level = preload("res://test.tscn")
+@onready var start_level = preload("res://Scenes/test.tscn")
 
 func _ready() -> void:
 	handle_connecting_signals()
