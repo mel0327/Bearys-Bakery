@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://jeorge.gd" id="1_quuhn"]
 [ext_resource type="Texture2D" uid="uid://dve3kbquuqvvo" path="res://Assets/cats.png" id="1_wc5w4"]
-[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://350919__cabled_mess__hurt_c_05.wav" id="3_p0vjp"]
-[ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://168567__psychentist__ratdeath.mp3" id="4_ysi8j"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_p0vjp"]
+[ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_ysi8j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vgye"]
 radius = 27.0
