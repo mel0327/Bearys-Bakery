@@ -6,18 +6,27 @@
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_in4be"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agoux"]
-radius = 86.0
-height = 307.0
+radius = 34.0
+height = 116.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c8b66"]
-radius = 657.709
+radius = 154.302
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ak31r"]
-radius = 86.0
-height = 292.0
+radius = 35.0
+height = 118.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihnmd"]
-bg_color = Color(0.135012, 0.135012, 0.135012, 0.988235)
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dmh16"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("3_s1ol3")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u80jx"]
+streams_count = 1
+stream_0/stream = ExtResource("4_in4be")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qapst"]
+bg_color = Color(0, 0, 0, 0.564706)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -32,57 +41,39 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boxkp"]
-bg_color = Color(1, 0.306829, 0.525874, 0.988235)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24i2e"]
+bg_color = Color(0.941176, 0.623529, 0.839216, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dmh16"]
-playback_mode = 1
-streams_count = 1
-stream_0/stream = ExtResource("3_s1ol3")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u80jx"]
-streams_count = 1
-stream_0/stream = ExtResource("4_in4be")
-
 [node name="Mob" type="CharacterBody2D"]
-position = Vector2(302, 324)
 motion_mode = 1
 script = ExtResource("1_2atfb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(28, -87.5)
-scale = Vector2(0.0539062, 0.059082)
+position = Vector2(2, -1.00003)
+scale = Vector2(0.0252929, 0.024707)
 texture = ExtResource("2_177hm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_agoux")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_c8b66")
 
 [node name="HitBox" type="Area2D" parent="."]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ak31r")
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -84.0
-offset_top = -224.0
-offset_right = 61.0
-offset_bottom = -206.0
-theme_override_styles/background = SubResource("StyleBoxFlat_ihnmd")
-theme_override_styles/fill = SubResource("StyleBoxFlat_boxkp")
-value = 50.0
-show_percentage = false
 
 [node name="HurtSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -94,3 +85,14 @@ unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_u80jx")
 volume_db = 3.0
 pitch_scale = 3.0
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -44.0
+offset_top = -92.0
+offset_right = 63.0
+offset_bottom = -84.0
+theme_override_styles/background = SubResource("StyleBoxFlat_qapst")
+theme_override_styles/fill = SubResource("StyleBoxFlat_24i2e")
+value = 50.0
+show_percentage = false

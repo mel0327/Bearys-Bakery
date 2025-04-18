@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://q8i4rhigp7s1"]
+[gd_scene load_steps=6 format=3 uid="uid://q8i4rhigp7s1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_l3i6r"]
 [ext_resource type="Texture2D" uid="uid://bdiequ3i6lg24" path="res://Assets/startbetaTest1.png" id="2_e1twl"]
+[ext_resource type="Theme" uid="uid://80x520lkkcuc" path="res://main_menu_button.tres" id="3_m0vmb"]
+[ext_resource type="FontFile" uid="uid://b4vlhabd0nxij" path="res://Assets/CHERI___.TTF" id="4_1hbn1"]
 [ext_resource type="PackedScene" uid="uid://cmn230kak7r3m" path="res://Scenes/options_menu.tscn" id="4_46ud3"]
 
 [node name="MainMenu" type="Control"]
@@ -38,6 +40,8 @@ theme_override_constants/separation = 20
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("3_m0vmb")
+theme_override_fonts/font = ExtResource("4_1hbn1")
 theme_override_font_sizes/font_size = 30
 text = "Start Game"
 
@@ -45,15 +49,22 @@ text = "Start Game"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("3_m0vmb")
+theme_override_fonts/font = ExtResource("4_1hbn1")
+theme_override_font_sizes/font_size = 30
 text = "Options"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("3_m0vmb")
+theme_override_fonts/font = ExtResource("4_1hbn1")
+theme_override_font_sizes/font_size = 30
 text = "Exit"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("4_46ud3")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

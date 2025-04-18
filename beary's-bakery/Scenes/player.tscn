@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://Scenes/weapon.tscn" id="4_1khfd"]
 [ext_resource type="Script" path="res://Scripts/weapon_pivot.gd" id="4_jxq5n"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hu2ak"]
-radius = 136.015
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a0k1m"]
+radius = 16.0
+height = 64.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_137ye"]
 bg_color = Color(0, 0, 0, 0.564706)
@@ -33,15 +34,19 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_bpgu4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -9.53674e-07)
+scale = Vector2(0.30916, 0.293269)
 texture = ExtResource("2_medtd")
 script = ExtResource("3_egeio")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-shape = SubResource("CircleShape2D_hu2ak")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_a0k1m")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
 script = ExtResource("4_jxq5n")
@@ -54,11 +59,12 @@ scale = Vector2(0.25, 0.25)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -100.0
-offset_top = -200.0
-offset_right = 100.0
-offset_bottom = -170.0
+offset_left = -48.0
+offset_top = -78.0
+offset_right = 52.0
+offset_bottom = -70.0
 theme_override_styles/background = SubResource("StyleBoxFlat_137ye")
 theme_override_styles/fill = SubResource("StyleBoxFlat_galb8")
 value = 50.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true

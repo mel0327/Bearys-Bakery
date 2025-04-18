@@ -1,9 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmn230kak7r3m"]
+[gd_scene load_steps=8 format=3 uid="uid://cmn230kak7r3m"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_4jwhc"]
+[ext_resource type="FontFile" uid="uid://b4vlhabd0nxij" path="res://Assets/CHERI___.TTF" id="2_q0hqo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyixk"]
+bg_color = Color(0.976471, 0.788235, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5adu"]
+bg_color = Color(0.976471, 0.788235, 0.913725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8wva"]
+bg_color = Color(1, 0.738832, 0.917378, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3e07"]
+bg_color = Color(0.976471, 0.788235, 0.913725, 1)
+
+[sub_resource type="Theme" id="Theme_sposj"]
+Button/styles/focus = SubResource("StyleBoxFlat_wyixk")
+Button/styles/hover = SubResource("StyleBoxFlat_c5adu")
+Button/styles/normal = SubResource("StyleBoxFlat_q8wva")
+Button/styles/pressed = SubResource("StyleBoxFlat_x3e07")
 
 [node name="OptionsMenu" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,6 +57,7 @@ theme_override_constants/separation = -48
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_q0hqo")
 theme_override_font_sizes/font_size = 32
 text = "Options"
 horizontal_alignment = 1
@@ -47,4 +66,6 @@ vertical_alignment = 1
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
+theme = SubResource("Theme_sposj")
+theme_override_fonts/font = ExtResource("2_q0hqo")
 text = "Exit"
