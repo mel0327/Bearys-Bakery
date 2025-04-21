@@ -11,4 +11,4 @@ anchors_preset = 0
 position = Vector2(413, 518)
 
 [node name="Mob" parent="." instance=ExtResource("2_w3qjb")]
-position = Vector2(839, 709)
+position = Vector2(592, 521)

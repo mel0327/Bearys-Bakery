@@ -18,5 +18,12 @@ func _physics_process(delta: float) -> void:
 	if _traveled_distance >= max_range:
 		_destroy()
 	
+	
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Mob:
+		body.take_damage(damage)
+	_destroy()
+	
 func _destroy():
 	queue_free()

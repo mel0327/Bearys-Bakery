@@ -11,6 +11,7 @@ var _player: Player = null
 @onready var _hit_box: Area2D = %HitBox
 @onready var _hurt_sound: AudioStreamPlayer = %HurtSound
 @onready var _die_sound: AudioStreamPlayer = %DieSound
+@onready var health_bar: ProgressBar = %HealthBar
 
 
 func _ready() -> void:
@@ -31,11 +32,11 @@ func _ready() -> void:
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
-	
 	health = new_health
 	if health <= 0:
 		die()
 	elif health < previous_health:
+		health_bar.visible = true
 		_hurt_sound.play()
 
 func die() -> void:
@@ -60,3 +61,6 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 
 	move_and_slide()
+
+func take_damage(amount:int) -> void:
+	set_health(health-amount)
