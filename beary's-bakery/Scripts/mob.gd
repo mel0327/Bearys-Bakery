@@ -33,8 +33,7 @@ func _ready() -> void:
 func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = new_health
-	health = clamp(new_health, 0, 100)
-	health_bar.value = float(health) / float(health_bar.max_value) * 100.0
+	health_bar.value = health
 	if health <= 0:
 		die()
 	elif health < previous_health:

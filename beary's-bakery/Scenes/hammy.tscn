@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxu755suyt7ne"]
 
-[ext_resource type="Texture2D" path="res://hammy1.png" id="1_2stxe"]
+[ext_resource type="Texture2D" uid="uid://d346uve4csmic" path="res://Assets/hammy1.png" id="1_2stxe"]
 [ext_resource type="Script" path="res://Scripts/hammy.gd" id="1_l3e5u"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
@@ -10,14 +10,23 @@ radius = 33.5
 height = 139.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5s8v"]
-radius = 201.921
+radius = 399.061
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tu8y"]
 radius = 33.0
 height = 144.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ci25o"]
-bg_color = Color(0.135012, 0.135012, 0.135012, 0.988235)
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8fsst"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("3_805yl")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jqhl3"]
+streams_count = 1
+stream_0/stream = ExtResource("4_8u0u3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uv7v5"]
+bg_color = Color(0, 0, 0, 0.564706)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -32,21 +41,12 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsp00"]
-bg_color = Color(1, 0.306829, 0.525874, 0.988235)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmhq6"]
+bg_color = Color(0.941176, 0.623529, 0.839216, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8fsst"]
-playback_mode = 1
-streams_count = 1
-stream_0/stream = ExtResource("3_805yl")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jqhl3"]
-streams_count = 1
-stream_0/stream = ExtResource("4_8u0u3")
 
 [node name="Hammy" type="CharacterBody2D"]
 motion_mode = 1
@@ -74,16 +74,6 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource("CapsuleShape2D_1tu8y")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -74.0
-offset_top = -106.0
-offset_right = 71.0
-offset_bottom = -88.0
-theme_override_styles/background = SubResource("StyleBoxFlat_ci25o")
-theme_override_styles/fill = SubResource("StyleBoxFlat_gsp00")
-value = 50.0
-show_percentage = false
-
 [node name="HurtSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_8fsst")
@@ -93,3 +83,14 @@ volume_db = 6.0
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_jqhl3")
 volume_db = 3.0
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -50.0
+offset_top = -93.0
+offset_right = 57.0
+offset_bottom = -85.0
+theme_override_styles/background = SubResource("StyleBoxFlat_uv7v5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wmhq6")
+value = 100.0
+show_percentage = false

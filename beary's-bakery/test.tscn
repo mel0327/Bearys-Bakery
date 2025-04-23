@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dst280nv7hrqw"]
+[gd_scene load_steps=4 format=3 uid="uid://dst280nv7hrqw"]
 
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="1_cmtgp"]
 [ext_resource type="PackedScene" uid="uid://dsu2ylq3yelpp" path="res://Scenes/mob.tscn" id="2_w3qjb"]
+[ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="3_pfasm"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -12,3 +13,6 @@ position = Vector2(413, 518)
 
 [node name="Mob" parent="." instance=ExtResource("2_w3qjb")]
 position = Vector2(592, 521)
+
+[node name="Hammy" parent="." instance=ExtResource("3_pfasm")]
+position = Vector2(964, 182)

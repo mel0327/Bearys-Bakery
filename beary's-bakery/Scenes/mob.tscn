@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dsu2ylq3yelpp"]
 
 [ext_resource type="Script" path="res://Scripts/mob.gd" id="1_2atfb"]
-[ext_resource type="Texture2D" uid="uid://d346uve4csmic" path="res://Assets/hammy1.png" id="2_177hm"]
+[ext_resource type="Texture2D" uid="uid://r747e54npjfm" path="res://Assets/bear.png" id="2_qh8lk"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_s1ol3"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_in4be"]
 
@@ -53,9 +53,8 @@ motion_mode = 1
 script = ExtResource("1_2atfb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(13, -30)
-scale = Vector2(0.0252929, 0.024707)
-texture = ExtResource("2_177hm")
+scale = Vector2(0.308824, 0.333333)
+texture = ExtResource("2_qh8lk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
@@ -95,5 +94,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_qapst")
 theme_override_styles/fill = SubResource("StyleBoxFlat_24i2e")
 value = 100.0
 show_percentage = false
-
-[connection signal="child_entered_tree" from="HitBox/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
