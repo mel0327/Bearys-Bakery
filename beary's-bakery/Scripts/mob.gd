@@ -2,7 +2,7 @@ class_name Mob extends CharacterBody2D
 
 @export var max_speed := 400.0
 @export var acceleration := 700.0
-@export var health := 3: set = set_health
+@export var health := 100: set = set_health
 @export var damage := 1 
 
 var _player: Player = null
@@ -33,6 +33,8 @@ func _ready() -> void:
 func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = new_health
+	health = clamp(new_health, 0, 100)
+	health_bar.value = float(health) / float(health_bar.max_value) * 100.0
 	if health <= 0:
 		die()
 	elif health < previous_health:

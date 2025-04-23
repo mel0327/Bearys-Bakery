@@ -10,7 +10,7 @@ radius = 34.0
 height = 116.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c8b66"]
-radius = 154.302
+radius = 335.436
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ak31r"]
 radius = 35.0
@@ -63,7 +63,6 @@ shape = SubResource("CapsuleShape2D_agoux")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 unique_name_in_owner = true
-visible = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
 position = Vector2(0, 4)
@@ -94,7 +93,7 @@ offset_right = 57.0
 offset_bottom = -85.0
 theme_override_styles/background = SubResource("StyleBoxFlat_qapst")
 theme_override_styles/fill = SubResource("StyleBoxFlat_24i2e")
-value = 50.0
+value = 100.0
 show_percentage = false
 
 [connection signal="child_entered_tree" from="HitBox/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
