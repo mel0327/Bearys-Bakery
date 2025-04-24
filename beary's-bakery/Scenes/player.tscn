@@ -33,6 +33,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_bpgu4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
