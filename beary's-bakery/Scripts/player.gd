@@ -20,7 +20,6 @@ func _physics_process(delta):
 		handle_movement(delta)
 
 func handle_movement(delta: float) -> void:
-#
 
 	var move_direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var desired_velocity := speed * move_direction

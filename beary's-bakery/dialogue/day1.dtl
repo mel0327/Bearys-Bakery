@@ -32,11 +32,10 @@ Closing hour
 [wait time="1.5"]
 [background fade="0.5"]
 join Townsfolk3 center [animation="Zoom Center In" wait="true"]
-Townsfolk3: Excuse me! Have you seen my son?!
 join Dexter leftmost [animation="Slide In Left" length="0.1" wait="true"]
+Townsfolk3: Excuse me! Have you seen my son?!
 update Townsfolk3 right [animation="Shake X" repeat="2"]
 Townsfolk3: He’s been missing for 2 days!!! He was last seen around here... please help...
-update Townsfolk3
 leave --All-- [animation="Instant Out" wait="true"]
 join Beary right [animation="Slide In Right" length="1.0"]
 join BunBun left [animation="Slide In Left"]
