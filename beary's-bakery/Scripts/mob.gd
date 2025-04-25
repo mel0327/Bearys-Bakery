@@ -67,11 +67,9 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print(get_class(), "detected the player!")
 		_player = body
 
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body is Player:
-		print(get_class(), "lost the player!")
 		_player = body
