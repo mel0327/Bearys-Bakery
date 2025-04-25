@@ -4,7 +4,7 @@ signal dialogue_finished
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
-	Dialogic.start("opening")
+	Dialogic.start("day1")
 
 func _on_timeline_ended() -> void:
 	end_dialogue()
