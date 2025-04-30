@@ -104,7 +104,7 @@ unique_name_in_owner = true
 position = Vector2(7, -6)
 scale = Vector2(0.696, 0.663102)
 sprite_frames = SubResource("SpriteFrames_t5lq3")
-animation = &"back"
+animation = &"front"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -118,7 +118,7 @@ script = ExtResource("4_jxq5n")
 [node name="Marker2D" type="Marker2D" parent="WeaponPivot"]
 
 [node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_1khfd")]
-position = Vector2(50, 0)
+position = Vector2(15, -1)
 scale = Vector2(0.25, 0.25)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
