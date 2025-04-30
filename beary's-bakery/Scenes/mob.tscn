@@ -94,7 +94,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_qapst")
 theme_override_styles/fill = SubResource("StyleBoxFlat_24i2e")
 value = 100.0
 show_percentage = false
-
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

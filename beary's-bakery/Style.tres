@@ -39,11 +39,8 @@ overrides = {}
 script = ExtResource("1_tdncc")
 scene = ExtResource("5_o7jqk")
 overrides = {
-"box_animation_in": "1",
-"box_panel": "\"res://Style.tres\"",
 "name_label_custom_font_size": "35.0",
-"name_label_use_global_font_size": "false",
-"typing_sounds_mode": "2"
+"name_label_use_global_font_size": "false"
 }
 
 [sub_resource type="Resource" id="Resource_xl11a"]
@@ -83,4 +80,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_tdncc")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "10"

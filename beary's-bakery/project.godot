@@ -22,16 +22,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Beary": "res://dialogue/Beary.dch",
-"BunBun": "res://dialogue/BunBun.dch",
-"Dexter": "res://dialogue/Dexter.dch",
-"Townsfolk1": "res://dialogue/Townsfolk1.dch",
-"Townsfolk2": "res://dialogue/Townsfolk2.dch",
-"Townsfolk3": "res://dialogue/Townsfolk3.dch"
+"Beary": "res://Beary.dch",
+"BunBun": "res://BunBun.dch"
 }
 directories/dtl_directory={
-"day1": "res://dialogue/day1.dtl",
-"opening": "res://dialogue/opening.dtl"
+"opening": "res://opening.dtl"
 }
 layout/style_list=["res://Style.tres"]
 layout/default_style="res://Style.tres"
@@ -62,11 +57,7 @@ audio/max_channels=4.0
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-glossary/glossary_files=[]
-
-[display]
-
-window/stretch/mode="viewport"
+glossary/glossary_files=["res://glossary.tres"]
 
 [editor_plugins]
 
