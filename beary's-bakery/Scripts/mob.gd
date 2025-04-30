@@ -15,30 +15,29 @@ var _player: Player = null
 
 
 func _ready() -> void:
-	_detection_area.body_entered.connect(func (body: Node) -> void:
-		if body is Player:
-			_player = body
-	)
-	_detection_area.body_exited.connect(func (body: Node) -> void:
-		if body is Player:
-			_player = null
-	)
-
-	_hit_box.body_entered.connect(func (body: Node) -> void:
-		if body is Player:
-			body.health -= damage
-	)
+	health_bar.visible = false
+	_detection_area.body_entered.connect(_on_detection_area_body_entered)
+	_detection_area.body_exited.connect(_on_detection_area_body_exited)
+	_hit_box.body_entered.connect(_on_hit_box_body_entered)
 
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = new_health
 	health_bar.value = health
+	
+	if health < previous_health:
+		health_bar.visible = true
+		
 	if health <= 0:
 		die()
+		
 	elif health < previous_health:
 		health_bar.visible = true
 		_hurt_sound.play()
+		
+	if health == 100:
+		health_bar.visible = false
 
 func die() -> void:
 	if _hit_box == null:
@@ -65,3 +64,21 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(amount:int) -> void:
 	set_health(health-amount)
+
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.health -= damage
+	elif body is Bullet:
+		take_damage(body.damage)
+		body.queue_free()
+
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	if body is Player:
+		_player = body
+
+
+func _on_detection_area_body_exited(body: Node2D) -> void:
+	if body is Player:
+		_player = body

@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@onready var play_dialogue = preload("res://Scenes/dialogue_2.tscn")
+@onready var play_dialogue = preload("res://Scenes/dialogue_2.1.tscn")
 @onready var label: Label = $Label
 
 var is_player_near := false
