@@ -22,3 +22,6 @@ offset_top = -110.0
 offset_right = 75.0
 offset_bottom = -85.0
 text = "Press 'e' to interact"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

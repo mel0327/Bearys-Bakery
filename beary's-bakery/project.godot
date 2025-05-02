@@ -25,16 +25,21 @@ directories/dch_directory={
 "Beary": "res://dialogue/Beary.dch",
 "BunBun": "res://dialogue/BunBun.dch",
 "Dexter": "res://dialogue/Dexter.dch",
+"Hammy": "res://dialogue/Hammy.dch",
 "Townsfolk1": "res://dialogue/Townsfolk1.dch",
 "Townsfolk2": "res://dialogue/Townsfolk2.dch",
-"Townsfolk3": "res://dialogue/Townsfolk3.dch"
+"Townsfolk3": "res://dialogue/Townsfolk3.dch",
+"Townsfolk4": "res://dialogue/Townsfolk4.dch",
+"Townsfolk5": "res://dialogue/Townsfolk5.dch"
 }
 directories/dtl_directory={
 "day1": "res://dialogue/day1.dtl",
+"day2": "res://dialogue/day2.dtl",
+"day2_end": "res://dialogue/day2_end.dtl",
 "opening": "res://dialogue/opening.dtl"
 }
-layout/style_list=["res://Style.tres"]
-layout/default_style="res://Style.tres"
+layout/style_list=["res://dialogue/vn_style.tres", "res://dialogue/npc_style.tres"]
+layout/default_style="res://dialogue/npc_style.tres"
 glossary/default_case_sensitive=true
 variables={
 "Folder": {

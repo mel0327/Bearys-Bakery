@@ -6,16 +6,16 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "Style"
+"style": "vn_style"
 },
-"default_portrait": "Beary",
+"default_portrait": "Default",
 "description": "",
 "display_name": "Beary",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Beary": {
+"Default": {
 "export_overrides": {
 "image": "\"res://Assets/bear.png\""
 },

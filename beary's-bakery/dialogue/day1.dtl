@@ -31,7 +31,7 @@ leave BunBun [animation="Fade Out" length="1.5" wait="true"]
 Closing hour
 [wait time="1.5"]
 [background fade="0.5"]
-join Townsfolk3 center [animation="Zoom Center In" wait="true"]
+join Townsfolk3 center [animation="Zoom Center In"]
 join Dexter leftmost [animation="Slide In Left" length="0.1" wait="true"]
 Townsfolk3: Excuse me! Have you seen my son?!
 update Townsfolk3 right [animation="Shake X" repeat="2"]
@@ -40,10 +40,11 @@ leave --All-- [animation="Instant Out" wait="true"]
 join Beary right [animation="Slide In Right" length="1.0"]
 join BunBun left [animation="Slide In Left"]
 Beary: BunBun you can go home and rest
-[wait time="1.0"]
+[wait time="2.0"]
 BunBun: Okay...
-update BunBun leftmost [move_time="0.2"]
-leave --All-- [animation="Fade Out" length="1.0"]
+update BunBun leftmost [move_time="1.0"]
+[wait time="1.0"]
+leave --All-- [animation="Fade Out"]
 [wait time="1.0"]
 [background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
 [wait time="1.5"]
