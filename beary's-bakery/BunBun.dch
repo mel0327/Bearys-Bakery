@@ -6,16 +6,16 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "vn_style"
 },
-"default_portrait": "BunBun",
+"default_portrait": "Default",
 "description": "",
 "display_name": "BunBun",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"BunBun": {
+"Default": {
 "export_overrides": {
 "image": "\"res://Assets/bunny.png\""
 },

@@ -1,0 +1,67 @@
+Not even a minute before BunBun walks in, a couple of  townsfolk walk in crying with a missing poster, bombarding BunBun’s personal space.
+join BunBun center [animation="Slide In Right" length="1.0"]
+[wait time="1.0"]
+join Townsfolk4 right [animation="Bounce In"]
+join Townsfolk5 rightmost [animation="Bounce In"]
+Townsfolk4: Have you seen my friend?!?!?!?
+update Townsfolk4 center [animation="Shake X"]
+join BunBun left [animation="Slide In Right"]
+Townsfolk4: PLEASE TELL ME YOU'VE SEEN HIM!
+update Townsfolk5 right [animation="Shake Y"]
+join BunBun leftmost [animation="Slide In Left"]
+Townsfolk5: YEAH PLEASE TELL ME YOU’VE SEEN HIM!
+Townsfolk5: I CANNOT LOSE HIM TOO!!!
+join Hammy left [animation="Slide In Left" length="1.5" wait="true"]
+Hammy: Excuse me
+Hammy: If you are not buying our food, please leave
+[wait time="2.0"]
+Tearfully, they comply
+leave Townsfolk5 [animation="Slide Out Left" length="3.0"]
+leave Townsfolk4 [animation="Slide Out Left" length="3.5" wait="true"]
+[wait time="1.0"]
+join Hammy right [animation="Slide In Left" length="1.0"]
+[wait time="0.5"]
+join BunBun left [animation="Slide In Left" length="1.0"]
+Hammy: You’re new here right?
+BunBun: Yeah...
+Hammy: Don’t worry too much about the missing citizens.
+Hammy: We don’t know anything and we can't do anything about it
+[wait time="1.0"]
+leave BunBun [animation="Instant Out"]
+update Hammy center [animation="Tada" wait="true"]
+Hammy: So I suggest not to pry
+join BunBun left [animation="Instant In" length="0.0"]
+join Hammy right [animation="Instant In" length="0.0"]
+BunBun: ...
+BunBun: Alright...
+BunBun is now very curious about the situation and wants to investigate
+leave --All-- [animation="Instant Out"]
+[background arg="res://Assets/Black_BG_1-01.webp" fade="2.0" transition="Push Right"]
+[wait time="1.5"]
+Night time
+[background fade="2.0" transition="Simple Fade"]
+[wait time="1.0"]
+join BunBun center [animation="Slide In Up"]
+BunBun is outside the bakery, but everything is locked.
+label redo code
+[text_input text="Enter the 4-digit code" var="response"]
+if {response} != "0000":
+	BunBun: That's wrong...
+	jump redo code
+BunBun: Got it!
+BunBun goes into the kitchen which looks normal, necessities, nothing out of the ordinary
+As BunBun walks further, BunBun sees three doors and decides to open the first door.
+# change background to pantry
+[background fade="0.0"]
+The door behind BunBun shuts as the pantry lights flickered on. BunBun sees the same dark hooded figure they saw last night.
+join Hammy right [animation="Slide In Right" length="1.5" wait="true" z_index="-1"]
+update BunBun left [animation="Bounce" length="1.0" wait="true" move_time="0.3"]
+Hammy: I told you not to pry.
+Hammy throws large black bag on the floor
+# thump sfx
+BunBun: What is going on here!?
+update Hammy center [length="0.7" wait="true" move_time="0.7"]
+update BunBun leftmost [animation="Heartbeat" length="0.2" wait="true" move_time="0.3"]
+BunBun: Tell me what’s going on here.
+update Hammy left [animation="Shake Y" length="0.3" wait="true" repeat="2" move_time="0.3"]
+[end_timeline]

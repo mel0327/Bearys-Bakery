@@ -1,0 +1,52 @@
+join BunBun center [animation="Slide In Up" wait="true"]
+BunBun: First day on the job, kind of excited!
+BunBun: This is weird...\
+What kind of bakery doesn’t let their staff members in the kitchen...
+[wait time="0.3"]
+leave BunBun [animation="Slide Out Left" length="2.5" wait="true"]
+[wait time="0.1"]
+[background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
+[wait time="1.5"]
+Rush hour is over and it becomes more quiet than usual
+[background fade="0.5"]
+join Townsfolk1 left [animation="Slide In Left"]
+join Townsfolk2 right [animation="Slide In Right" wait="true" mirrored="true"]
+Townsfolk1: Is it just me or does the cake taste weird?\
+There's a meaty after taste...
+Townsfolk2: Yes! I thought I was hallucinating or something.
+[wait time="1.0"]
+Townsfolk2: Have you seen all the missing posters?! That’s kind of scary.
+Townsfolk1: I heard they were all last seen around this area...
+Townsfolk1: We should go home before something happens to us.
+[wait time="1.0"]
+leave --All-- [animation="Fade Out" wait="true"]
+[wait time="1.0"]
+join BunBun center [animation="Fade In Up"]
+[wait time="0.25"]
+BunBun: What?? Cake tasting like meat and missing people?
+BunBun: Could it be...
+leave BunBun [animation="Fade Out" length="1.5" wait="true"]
+[background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
+[wait time="1.5"]
+Closing hour
+[wait time="1.5"]
+[background fade="0.5"]
+join Townsfolk3 center [animation="Zoom Center In"]
+join Dexter leftmost [animation="Slide In Left" length="0.1" wait="true"]
+Townsfolk3: Excuse me! Have you seen my son?!
+update Townsfolk3 right [animation="Shake X" repeat="2"]
+Townsfolk3: He’s been missing for 2 days!!! He was last seen around here... please help...
+leave --All-- [animation="Instant Out" wait="true"]
+join Beary right [animation="Slide In Right" length="1.0"]
+join BunBun left [animation="Slide In Left"]
+Beary: BunBun you can go home and rest
+[wait time="2.0"]
+BunBun: Okay...
+update BunBun leftmost [move_time="1.0"]
+[wait time="1.0"]
+leave --All-- [animation="Fade Out"]
+[wait time="1.0"]
+[background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
+[wait time="1.5"]
+CRASH
+[end_timeline]
