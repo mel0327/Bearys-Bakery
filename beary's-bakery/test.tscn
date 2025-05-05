@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdesydvs4lrq0"]
+[gd_scene load_steps=4 format=3 uid="uid://bdesydvs4lrq0"]
 
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="1_cmtgp"]
-[ext_resource type="PackedScene" uid="uid://dsu2ylq3yelpp" path="res://Scenes/mob.tscn" id="2_w3qjb"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="3_pfasm"]
 [ext_resource type="PackedScene" uid="uid://q0in37xtjbdw" path="res://Scenes/beary.tscn" id="4_je1w8"]
-[ext_resource type="PackedScene" uid="uid://u38ug5ggjb46" path="res://Scenes/jeorge.tscn" id="5_8qpqv"]
-[ext_resource type="PackedScene" uid="uid://bg5pmqh3hbu6y" path="res://Scenes/james.tscn" id="6_unmns"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -14,17 +11,8 @@ anchors_preset = 0
 [node name="Player" parent="." instance=ExtResource("1_cmtgp")]
 position = Vector2(413, 518)
 
-[node name="Mob" parent="." instance=ExtResource("2_w3qjb")]
-position = Vector2(592, 521)
-
 [node name="Hammy" parent="." instance=ExtResource("3_pfasm")]
 position = Vector2(964, 182)
 
 [node name="Beary" parent="." instance=ExtResource("4_je1w8")]
 position = Vector2(124, 524)
-
-[node name="Jeorge" parent="." instance=ExtResource("5_8qpqv")]
-position = Vector2(456, 108)
-
-[node name="James" parent="." instance=ExtResource("6_unmns")]
-position = Vector2(200, 208)

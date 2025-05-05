@@ -12,6 +12,7 @@ var _player: Player = null
 @onready var _hurt_sound: AudioStreamPlayer = %HurtSound
 @onready var _die_sound: AudioStreamPlayer = %DieSound
 @onready var health_bar: ProgressBar = %HealthBar
+@onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
 
 
 func _ready() -> void:
@@ -61,6 +62,7 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 
 	move_and_slide()
+	update_animation()
 
 func take_damage(amount:int) -> void:
 	set_health(health-amount)
@@ -82,3 +84,23 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body is Player:
 		_player = body
+
+
+func update_animation() -> void:
+	if animated_sprite == null:
+		return
+		
+	if velocity.length() < 5:
+		animated_sprite.stop()
+		return
+		
+	if abs(velocity.x) > abs(velocity.y):
+		if velocity.x > 0:
+			animated_sprite.play("right")
+		else:
+			animated_sprite.play("left")
+	else:
+		if velocity.y > 0:
+			animated_sprite.play("front")
+		else:
+			animated_sprite.play("back")

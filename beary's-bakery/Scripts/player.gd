@@ -14,6 +14,7 @@ var can_move = true
 func _ready() -> void:
 	health_bar.max_value = 4
 	health_bar.value = health
+	health_bar.visible = false
 
 func _physics_process(delta):
 	if can_move:
@@ -32,6 +33,10 @@ func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = clampi(new_health, 0, max_health)
 	health_bar.value = health
+	
+	if new_health < previous_health:
+		health_bar.visible = true
+		
 	if health == 0:
 		die()
 
