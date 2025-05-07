@@ -12,7 +12,7 @@ anchors_preset = 0
 position = Vector2(413, 518)
 
 [node name="Hammy" parent="." instance=ExtResource("3_pfasm")]
-position = Vector2(964, 182)
+position = Vector2(869, 257)
 
 [node name="Beary" parent="." instance=ExtResource("4_je1w8")]
-position = Vector2(124, 524)
+position = Vector2(154, 307)
