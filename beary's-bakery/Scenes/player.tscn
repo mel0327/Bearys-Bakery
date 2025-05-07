@@ -1,14 +1,77 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4h3qwfkog4s6"]
+[gd_scene load_steps=15 format=3 uid="uid://d4h3qwfkog4s6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_bpgu4"]
-[ext_resource type="Texture2D" uid="uid://cfsj64poc84in" path="res://Assets/bunny.png" id="2_medtd"]
-[ext_resource type="Script" path="res://Scripts/sprite_2d.gd" id="3_egeio"]
 [ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://Scenes/weapon.tscn" id="4_1khfd"]
 [ext_resource type="Script" path="res://Scripts/weapon_pivot.gd" id="4_jxq5n"]
+[ext_resource type="Texture2D" uid="uid://fggvotxo7nj6" path="res://Assets/pistol.png" id="5_qcnbi"]
+[ext_resource type="Texture2D" uid="uid://cayyv3pexx6s3" path="res://Assets/bunbunspritesheet.png" id="6_iy0yx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61esy"]
+atlas = ExtResource("6_iy0yx")
+region = Rect2(125, 0, 125, 187)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfeal"]
+atlas = ExtResource("6_iy0yx")
+region = Rect2(0, 0, 125, 187)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjc0a"]
+atlas = ExtResource("6_iy0yx")
+region = Rect2(0, 0, 125, 187)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewbux"]
+atlas = ExtResource("6_iy0yx")
+region = Rect2(0, 187, 125, 187)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f28j6"]
+atlas = ExtResource("6_iy0yx")
+region = Rect2(125, 187, 125, 187)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5lq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61esy")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfeal")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjc0a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewbux")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f28j6")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a0k1m"]
-radius = 16.0
-height = 64.0
+radius = 19.0
+height = 62.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_137ye"]
 bg_color = Color(0, 0, 0, 0.564706)
@@ -37,15 +100,16 @@ corner_radius_bottom_left = 4
 motion_mode = 1
 script = ExtResource("1_bpgu4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, -9.53674e-07)
-scale = Vector2(0.30916, 0.293269)
-texture = ExtResource("2_medtd")
-script = ExtResource("3_egeio")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(18, -18)
+scale = Vector2(1.014, 0.925134)
+sprite_frames = SubResource("SpriteFrames_t5lq3")
+animation = &"front"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_a0k1m")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
@@ -54,15 +118,19 @@ script = ExtResource("4_jxq5n")
 [node name="Marker2D" type="Marker2D" parent="WeaponPivot"]
 
 [node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_1khfd")]
-position = Vector2(50, 0)
+position = Vector2(36, 0)
 scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="WeaponPivot/Marker2D"]
+position = Vector2(30, 5)
+texture = ExtResource("5_qcnbi")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -48.0
-offset_top = -78.0
-offset_right = 52.0
-offset_bottom = -70.0
+offset_left = -45.0
+offset_top = -117.0
+offset_right = 55.0
+offset_bottom = -109.0
 theme_override_styles/background = SubResource("StyleBoxFlat_137ye")
 theme_override_styles/fill = SubResource("StyleBoxFlat_galb8")
 value = 50.0

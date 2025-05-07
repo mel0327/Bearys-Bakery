@@ -12,33 +12,33 @@ var _player: Player = null
 @onready var _hurt_sound: AudioStreamPlayer = %HurtSound
 @onready var _die_sound: AudioStreamPlayer = %DieSound
 @onready var health_bar: ProgressBar = %HealthBar
+@onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
 
 
 func _ready() -> void:
-	_detection_area.body_entered.connect(func (body: Node) -> void:
-		if body is Player:
-			_player = body
-	)
-	_detection_area.body_exited.connect(func (body: Node) -> void:
-		if body is Player:
-			_player = null
-	)
-
-	_hit_box.body_entered.connect(func (body: Node) -> void:
-		if body is Player:
-			body.health -= damage
-	)
+	health_bar.visible = false
+	_detection_area.body_entered.connect(_on_detection_area_body_entered)
+	_detection_area.body_exited.connect(_on_detection_area_body_exited)
+	_hit_box.body_entered.connect(_on_hit_box_body_entered)
 
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = new_health
 	health_bar.value = health
+	
+	if health < previous_health:
+		health_bar.visible = true
+		
 	if health <= 0:
 		die()
+		
 	elif health < previous_health:
 		health_bar.visible = true
 		_hurt_sound.play()
+		
+	if health == 100:
+		health_bar.visible = false
 
 func die() -> void:
 	if _hit_box == null:
@@ -62,6 +62,45 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 
 	move_and_slide()
+	update_animation()
 
 func take_damage(amount:int) -> void:
 	set_health(health-amount)
+
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.health -= damage
+	elif body is Bullet:
+		take_damage(body.damage)
+		body.queue_free()
+
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	if body is Player:
+		_player = body
+
+
+func _on_detection_area_body_exited(body: Node2D) -> void:
+	if body is Player:
+		_player = body
+
+
+func update_animation() -> void:
+	if animated_sprite == null:
+		return
+		
+	if velocity.length() < 5:
+		animated_sprite.stop()
+		return
+		
+	if abs(velocity.x) > abs(velocity.y):
+		if velocity.x > 0:
+			animated_sprite.play("right")
+		else:
+			animated_sprite.play("left")
+	else:
+		if velocity.y > 0:
+			animated_sprite.play("front")
+		else:
+			animated_sprite.play("back")
