@@ -30,7 +30,8 @@ directories/dch_directory={
 "Townsfolk2": "res://dialogue/Townsfolk2.dch",
 "Townsfolk3": "res://dialogue/Townsfolk3.dch",
 "Townsfolk4": "res://dialogue/Townsfolk4.dch",
-"Townsfolk5": "res://dialogue/Townsfolk5.dch"
+"Townsfolk5": "res://dialogue/Townsfolk5.dch",
+"dialogue/Beary": "res://dialogue/Beary.dch"
 }
 directories/dtl_directory={
 "day1": "res://dialogue/day1.dtl",
@@ -39,7 +40,7 @@ directories/dtl_directory={
 "opening": "res://dialogue/opening.dtl"
 }
 layout/style_list=["res://dialogue/vn_style.tres", "res://dialogue/npc_style.tres"]
-layout/default_style="res://dialogue/npc_style.tres"
+layout/default_style="res://dialogue/vn_style.tres"
 glossary/default_case_sensitive=true
 variables={
 "Folder": {
@@ -68,6 +69,11 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 glossary/glossary_files=[]
+layout/style_directory={
+"": "res://dialogue/vn_style.tres",
+"npc_style": "res://dialogue/npc_style.tres",
+"vn_style": "res://dialogue/vn_style.tres"
+}
 
 [display]
 

@@ -1,0 +1,15 @@
+[wait time="1.0"]
+join BunBun left [animation="Slide From Left" length="2.0"]
+join Hammy right [animation="Slide From Right" length="2.0" wait="true"]
+BunBun: This is your last chance.
+update Hammy [animation="Shake X" length="1.0"]
+Hammy: Why don’t you check the bag?
+BunBun with their gun still pointed on Hammy, opens bag and sees an unconscious body, bludgeoned on the head
+# bang sfx, shots hammy
+leave --All-- [animation="Instant Out"]
+[background arg="res://Assets/black_background.png" fade="0.5"]
+[wait time="1.5"]
+[background fade="0.5"]
+BunBun just came out of the hospital and started walking home. BunBun thinks about what just happened on the way home. He reaches home when the sun rises.
+# end
+[end_timeline]

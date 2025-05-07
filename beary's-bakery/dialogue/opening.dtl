@@ -1,0 +1,18 @@
+join BunBun left [animation="Slide In Up" wait="true"]
+BunBun: Hello, my name is BunBun! I just moved into Vanilla City!
+BunBun: I saw your sign outside. What do I have to do to be hired?
+join Beary right [animation="Slide From Right" length="0.7" wait="true" mirrored="true"]
+Beary: Hi! Welcome to Beary’s bakery! Do you have any experience on being a server?
+BunBun: No, but it’s just serving the food right?
+Beary: Yes! I’ll just hire you because we are in desperate need of a new server ON ONE CONDITION.
+BunBun: What’s is it?
+[wait time="1.0"]
+leave BunBun [animation="Instant Out"]
+update Beary center [animation="Tada" length="0.2" wait="true" repeat="3"]
+Beary: Under NO circumstances should you enter the kitchen.
+Beary: Okay?
+update Beary right
+join BunBun left [animation="Instant In"]
+BunBun: That’s a strange request…but okay!
+leave --All-- [animation="Fade Out"]
+[wait time="1.0"]
