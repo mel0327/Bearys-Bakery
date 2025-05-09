@@ -1,7 +1,15 @@
 The next day when BunBun walked into Beary’s Bakery, Hammy’s body was gone. BunBun continued work like nothing happened until the end of their shift
 join BunBun center [animation="Slide In Left" length="1.5" wait="true"]
 BunBun decides to break into the kitchen.
-join James left [z_index="-1"]
-[background fade="0.0"]
-join Jeorge right [z_index="-1"]
-e nd
+join James right [z_index="-1"]
+join Jeorge rightmost [z_index="-1"]
+[wait time="0.5"]
+update BunBun leftmost [animation="Bounce" length="1.0" wait="true" move_time="0.3"]
+James: Who allowed you to come in.
+BunBun: Who are you? Tell me what’s going on!
+BunBun points their gun at James
+Jeorge: Get out before things get messy.
+BunBun doesn’t move. James and Jeorge charge at BunBun.
+[wait time="1.5"]
+# fight
+[end_timeline]

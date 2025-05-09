@@ -14,7 +14,8 @@
 [sub_resource type="Resource" id="Resource_vpx7q"]
 script = ExtResource("1_m6vvm")
 overrides = {
-"global_bg_color": "Color(0.50658, 0.833984, 0.734228, 0.9)",
+"global_bg_color": "Color(0.50658, 0.833984, 0.634472, 0.9)",
+"global_font_color": "Color(0, 0, 0, 1)",
 "global_font_size": "25.0"
 }
 

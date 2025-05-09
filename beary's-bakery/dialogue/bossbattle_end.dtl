@@ -1,0 +1,18 @@
+join Beary right [animation="Slide In Right"]
+join BunBun left [animation="Slide In Left" wait="true"]
+update Beary [animation="Tada" repeat="2"]
+Beary: I forgot to mention, I used to be captain of the marine corps.
+[wait time="1.0" hide_text="false"]
+BunBun: Why did you switch up?
+[wait time="1.0" hide_text="false"]
+Beary: Because...
+Beary: ...
+[wait time="0.3" hide_text="false"]
+Beary: I heard some of you talking bad about my pastries.
+[wait time="1.0"]
+# bunbun shoots beary
+update Beary rightmost [animation="Tada" wait="true" repeat="2" move_time="0.7"]
+BunBun: You should never kill anyone over a small comment.
+Beary:  I don’t regret my actions.
+# beary dies, the end
+[end_timeline]

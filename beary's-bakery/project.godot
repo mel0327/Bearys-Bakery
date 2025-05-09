@@ -36,6 +36,8 @@ directories/dch_directory={
 "dialogue/Beary": "res://dialogue/Beary.dch"
 }
 directories/dtl_directory={
+"bossbattle": "res://dialogue/bossbattle.dtl",
+"bossbattle_end": "res://dialogue/bossbattle_end.dtl",
 "day1": "res://dialogue/day1.dtl",
 "day2": "res://dialogue/day2.dtl",
 "day2_end": "res://dialogue/day2_end.dtl",
@@ -43,7 +45,7 @@ directories/dtl_directory={
 "opening": "res://dialogue/opening.dtl",
 "test_timeline": "res://dialogue/test_timeline.dtl"
 }
-layout/style_list=["res://dialogue/npc_style.tres", "res://dialogue/bunbun_style.tres", "res://dialogue/hammy_style.tres", "", "res://dialogue/dexter_style.tres", "res://dialogue/james_style.tres", "res://dialogue/jeorge_style.tres"]
+layout/style_list=["res://dialogue/npc_style.tres", "res://dialogue/bunbun_style.tres", "res://dialogue/hammy_style.tres", "res://dialogue/dexter_style.tres", "res://dialogue/james_style.tres", "res://dialogue/jeorge_style.tres", "res://dialogue/beary_style.tres"]
 layout/default_style="res://dialogue/npc_style.tres"
 glossary/default_case_sensitive=true
 variables={
