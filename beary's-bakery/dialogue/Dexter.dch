@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "dexter_style"
 },
 "default_portrait": "New portrait",
 "description": "",
@@ -17,7 +17,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://Assets/dog.png\""
+"image": "\"res://Assets/dexterfront.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

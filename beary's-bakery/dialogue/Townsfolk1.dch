@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "npc_style"
 },
 "default_portrait": "New portrait",
 "description": "",
@@ -17,11 +17,11 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://Assets/Blue_Candy_PNG_Clipart.png\""
+"image": "\"res://Assets/npcwhiteratcropped.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 1.0,
 "scene": ""
 }
 },

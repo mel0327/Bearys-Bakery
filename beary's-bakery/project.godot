@@ -25,16 +25,26 @@ directories/dch_directory={
 "Beary": "res://dialogue/Beary.dch",
 "BunBun": "res://dialogue/BunBun.dch",
 "Dexter": "res://dialogue/Dexter.dch",
+"Hammy": "res://dialogue/Hammy.dch",
+"James": "res://dialogue/James.dch",
+"Jeorge": "res://dialogue/Jeorge.dch",
 "Townsfolk1": "res://dialogue/Townsfolk1.dch",
 "Townsfolk2": "res://dialogue/Townsfolk2.dch",
-"Townsfolk3": "res://dialogue/Townsfolk3.dch"
+"Townsfolk3": "res://dialogue/Townsfolk3.dch",
+"Townsfolk4": "res://dialogue/Townsfolk4.dch",
+"Townsfolk5": "res://dialogue/Townsfolk5.dch",
+"dialogue/Beary": "res://dialogue/Beary.dch"
 }
 directories/dtl_directory={
 "day1": "res://dialogue/day1.dtl",
-"opening": "res://dialogue/opening.dtl"
+"day2": "res://dialogue/day2.dtl",
+"day2_end": "res://dialogue/day2_end.dtl",
+"day3": "res://dialogue/day3.dtl",
+"opening": "res://dialogue/opening.dtl",
+"test_timeline": "res://dialogue/test_timeline.dtl"
 }
-layout/style_list=["res://Style.tres"]
-layout/default_style="res://Style.tres"
+layout/style_list=["res://dialogue/npc_style.tres", "res://dialogue/bunbun_style.tres", "res://dialogue/hammy_style.tres", "", "res://dialogue/dexter_style.tres", "res://dialogue/james_style.tres", "res://dialogue/jeorge_style.tres"]
+layout/default_style="res://dialogue/npc_style.tres"
 glossary/default_case_sensitive=true
 variables={
 "Folder": {
@@ -63,6 +73,11 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 glossary/glossary_files=[]
+layout/style_directory={
+"": "res://dialogue/vn_style.tres",
+"npc_style": "res://dialogue/npc_style.tres",
+"vn_style": "res://dialogue/vn_style.tres"
+}
 
 [display]
 
