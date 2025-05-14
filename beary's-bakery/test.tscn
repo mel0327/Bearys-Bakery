@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dst280nv7hrqw"]
+[gd_scene load_steps=5 format=3 uid="uid://bdesydvs4lrq0"]
 
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="1_cmtgp"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="3_pfasm"]
+[ext_resource type="PackedScene" uid="uid://dmuhxvssra8nw" path="res://Scenes/pickuphealth.tscn" id="4_2tu5b"]
 [ext_resource type="PackedScene" uid="uid://q0in37xtjbdw" path="res://Scenes/beary.tscn" id="4_je1w8"]
 
 [node name="Test" type="Control"]
@@ -12,7 +13,10 @@ anchors_preset = 0
 position = Vector2(413, 518)
 
 [node name="Hammy" parent="." instance=ExtResource("3_pfasm")]
-position = Vector2(964, 182)
+position = Vector2(869, 257)
 
 [node name="Beary" parent="." instance=ExtResource("4_je1w8")]
-position = Vector2(124, 524)
+position = Vector2(154, 307)
+
+[node name="PickupHealth" parent="." instance=ExtResource("4_2tu5b")]
+position = Vector2(522, 140)

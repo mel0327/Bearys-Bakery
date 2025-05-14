@@ -6,10 +6,13 @@ class_name Player extends CharacterBody2D
 
 var health := max_health: set = set_health
 var can_move = true
+var is_hurt = false
+var last_direction = Vector2.ZERO
 
 @onready var health_bar: ProgressBar = %HealthBar
 @onready var collision_shape_2d: CollisionShape2D = %CollisionShape2D
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var timer: Timer = %HurtTimer
 
 func _ready() -> void:
 	health_bar.max_value = 4
@@ -36,6 +39,9 @@ func set_health(new_health: int) -> void:
 	
 	if new_health < previous_health:
 		health_bar.visible = true
+		is_hurt = true
+		animated_sprite.play("hurt")
+		%HurtTimer.start()
 		
 	if health == 0:
 		die()
@@ -50,31 +56,35 @@ func resume_movement():
 	can_move = true
 
 func update_animation() -> void:
-	var last_motion = get_last_motion()
-	if last_motion.x == 0 and last_motion.y == 0:
+	if is_hurt:
+		return
+
+	var move_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
+	if move_dir == Vector2.ZERO:
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
 		return
-	if (abs(last_motion.x) > abs(last_motion.y)):	
-		if last_motion.x > 0:
-			#print ("right")
+
+	if move_dir == last_direction:
+		return
+
+	last_direction = move_dir
+
+	if abs(move_dir.x) > abs(move_dir.y):
+		if move_dir.x > 0:
+			animated_sprite.flip_h = false
+			animated_sprite.play("right")
+		else:
 			animated_sprite.flip_h = true
-			if animated_sprite.animation != "right":
-				animated_sprite.play("right")
-		elif last_motion.x < 0:
-			#print("left")
-			animated_sprite.flip_h = true
-			if animated_sprite.animation != "left":
-				animated_sprite.play("left")
+			animated_sprite.play("left")
 	else:
-		if last_motion.y > 0:
-			#print ("Up")
-			animated_sprite.flip_h = true
-			if animated_sprite.animation != "front":
-				animated_sprite.play("front")
-		elif last_motion.y < 0:
-			#print("back")
-			animated_sprite.flip_h = true
-			if animated_sprite.animation != "back":
-				animated_sprite.play("back")
+		if move_dir.y > 0:
+			animated_sprite.play("front")
+		else:
+			animated_sprite.play("back")
 	
+
+
+func _on_hurt_timer_timeout() -> void:
+	is_hurt = false
