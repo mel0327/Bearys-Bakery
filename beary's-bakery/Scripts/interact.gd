@@ -35,7 +35,6 @@ func _on_dialogue_finished():
 	if player_reference:
 		player_reference.get_node("AnimatedSprite2D").visible = true
 		player_reference.resume_movement()
-	#set_deferred("monitoring", true)
 
 
 

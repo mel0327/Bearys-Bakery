@@ -1,3 +1,4 @@
+[background arg="res://Assets/cafe.png" fade="0.0"]
 join BunBun center [animation="Slide In Up" wait="true"]
 BunBun: First day on the job, kind of excited!
 BunBun: This is weird...\
@@ -8,7 +9,7 @@ leave BunBun [animation="Slide Out Left" length="2.5" wait="true"]
 [background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
 [wait time="1.5"]
 Rush hour is over and it becomes more quiet than usual
-[background fade="0.5"]
+[background arg="res://Assets/cafe.png" fade="0.5"]
 join Townsfolk1 left [animation="Slide In Left"]
 join Townsfolk2 right [animation="Slide In Right" wait="true" mirrored="true"]
 Townsfolk1: Is it just me or does the cake taste weird?\
@@ -30,7 +31,7 @@ leave BunBun [animation="Fade Out" length="1.5" wait="true"]
 [wait time="1.5"]
 Closing hour
 [wait time="1.5"]
-[background fade="0.5"]
+[background arg="res://Assets/cafe.png" fade="0.5"]
 join Townsfolk3 center [animation="Zoom Center In" wait="true"]
 join Dexter leftmost [animation="Slide In Left" length="0.1" wait="true"]
 Townsfolk3: Excuse me! Have you seen my son?!

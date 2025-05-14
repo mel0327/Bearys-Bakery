@@ -9,8 +9,8 @@
 [node name="Player" parent="." instance=ExtResource("1_3eobl")]
 position = Vector2(296, 305)
 
-[node name="Hammy" parent="." instance=ExtResource("2_3nlxo")]
-position = Vector2(786, 193)
-
 [node name="Interact" parent="." instance=ExtResource("3_sqejq")]
 position = Vector2(976, 493)
+
+[node name="Hammy" parent="." instance=ExtResource("2_3nlxo")]
+position = Vector2(719, -252)

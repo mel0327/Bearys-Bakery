@@ -1,4 +1,5 @@
-jump test
+[background arg="res://Assets/cafe.png" fade="0.3"]
+[wait time="1.0"]
 Not even a minute before BunBun walks in, a couple of  townsfolk walk in crying with a missing poster, bombarding BunBun’s personal space.
 join BunBun center [animation="Slide In Right" length="1.0"]
 [wait time="1.0"]
@@ -20,9 +21,9 @@ Tearfully, they comply
 leave Townsfolk5 [animation="Slide Out Left" length="3.0"]
 leave Townsfolk4 [animation="Slide Out Left" length="3.5" wait="true"]
 [wait time="1.0"]
-join Hammy right [animation="Slide In Left" length="1.0"]
+update Hammy right [animation="Slide In Left" length="1.0" move_time="0.5"]
+update BunBun left [animation="Slide In Left" length="1.0" wait="true" move_time="0.5"]
 [wait time="0.5"]
-join BunBun left [animation="Slide In Left" length="1.0"]
 Hammy: You’re new here right?
 BunBun: Yeah...
 Hammy: Don’t worry too much about the missing citizens.
@@ -37,12 +38,11 @@ BunBun: ...
 BunBun: Alright...
 BunBun is now very curious about the situation and wants to investigate
 leave --All-- [animation="Instant Out"]
-[background arg="res://Assets/Black_BG_1-01.webp" fade="2.0" transition="Push Right"]
+[background arg="res://Assets/Black_BG_1-01.webp" fade="2.0" transition="Push Down"]
 [wait time="1.5"]
 Night time
 [background fade="2.0" transition="Simple Fade"]
 [wait time="1.0"]
-label test
 join BunBun center [animation="Slide In Up"]
 BunBun is outside the bakery, but everything is locked.
 label redo code
@@ -56,6 +56,7 @@ As BunBun walks further, BunBun sees three doors and decides to open the first d
 [background arg="res://Assets/pantrynolight.png" fade="1.5" transition="Swipe Left To Right"]
 [wait time="1.0"]
 The door behind BunBun shuts as the pantry lights flickered on. BunBun sees the same dark hooded figure they saw last night.
+# hammy in hood
 join Hammy right [animation="Slide In Right" length="1.5" wait="true" z_index="-1"]
 [background arg="res://Assets/pantryyeslight.png" fade="0.5" transition="Simple Fade"]
 update BunBun left [animation="Bounce" length="1.0" wait="true" move_time="0.3"]

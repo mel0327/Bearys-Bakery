@@ -1,6 +1,9 @@
-The next day when BunBun walked into Beary’s Bakery, Hammy’s body was gone. BunBun continued work like nothing happened until the end of their shift
+[background arg="res://Assets/cafe.png" fade="0.0"]
+The next day when BunBun walked into Beary’s Bakery, Hammy’s body was gone. BunBun continued work like nothing happened until the end of their shift.
 join BunBun center [animation="Slide In Left" length="1.5" wait="true"]
 BunBun decides to break into the kitchen.
+[background fade="0.0"]
+# change to kitchen background
 join James right [z_index="-1"]
 join Jeorge rightmost [z_index="-1"]
 [wait time="0.5"]

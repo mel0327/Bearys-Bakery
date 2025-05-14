@@ -1,3 +1,5 @@
+[background arg="res://Assets/bossscene.png" fade="1.0"]
+[wait time="1.0"]
 join Beary right [animation="Slide In Right"]
 join BunBun left [animation="Slide In Left" wait="true"]
 update Beary [animation="Tada" repeat="2"]
@@ -10,9 +12,9 @@ Beary: ...
 [wait time="0.3" hide_text="false"]
 Beary: I heard some of you talking bad about my pastries.
 [wait time="1.0"]
-# bunbun shoots beary
+# bunbun shoots beary, bang sfx
 update Beary rightmost [animation="Tada" wait="true" repeat="2" move_time="0.7"]
 BunBun: You should never kill anyone over a small comment.
-Beary:  I don’t regret my actions.
+Beary: I don’t regret my actions.
 # beary dies, the end
 [end_timeline]

@@ -1,12 +1,18 @@
+# start w/ kitchen bg
 BunBun starts searching the kitchen, looking for anything else suspicious\
 They find dead bodies and jars filled with blood in the cabinets and fridges.
 join BunBun center [animation="Slide In Left"]
 There is a secret door behind one of the fridges.
-join Beary right [animation="Zoom Center In" z_index="-1"]
-Beary: I’ve been expecting you.
+[wait time="1.0"]
+# moving fridge/door creek sfx
+[background arg="res://Assets/bossscene.png" fade="1.0" transition="Push Right"]
+[wait time="1.0"]
+join Beary right [animation="Zoom Center In" wait="true" z_index="-1"]
 update BunBun left [animation="Heartbeat" wait="true" move_time="0.3"]
+Beary: I’ve been expecting you.
 BunBun: You--
 BunBun: Did you start this!? Why did you do this?! You’re hurting innocent animals!!!
+# beary laughs
 update Beary [animation="Shake X" length="0.7" wait="true" repeat="3"]
 Beary: It’s fun. I really don’t care about these pathetic creatures.
 update Beary center [animation="Tada" length="0.7" wait="true" repeat="2" move_time="0.2"]
@@ -17,9 +23,3 @@ Beary: Try and stop me.
 [wait time="1.5"]
 # many bang sfx + boss fight
 [end_timeline]
-join Beary center [animation="Slide In Right" wait="true"]
-Beary: I forgot to mention, I used to be captain of the marine corps.
-[wait time="1.0"]
-BunBun: Why did you switch up?
-[wait time="1.0"]
-Beary: Because...

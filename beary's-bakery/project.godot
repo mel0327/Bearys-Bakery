@@ -42,8 +42,7 @@ directories/dtl_directory={
 "day2": "res://dialogue/day2.dtl",
 "day2_end": "res://dialogue/day2_end.dtl",
 "day3": "res://dialogue/day3.dtl",
-"opening": "res://dialogue/opening.dtl",
-"test_timeline": "res://dialogue/test_timeline.dtl"
+"opening": "res://dialogue/opening.dtl"
 }
 layout/style_list=["res://dialogue/npc_style.tres", "res://dialogue/bunbun_style.tres", "res://dialogue/hammy_style.tres", "res://dialogue/dexter_style.tres", "res://dialogue/james_style.tres", "res://dialogue/jeorge_style.tres", "res://dialogue/beary_style.tres"]
 layout/default_style="res://dialogue/npc_style.tres"

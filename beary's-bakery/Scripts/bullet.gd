@@ -1,5 +1,8 @@
 class_name Bullet extends Area2D
 
+var is_dialogue_active := false
+
+
 @export var speed := 5000.0
 @export var damage := 1
 

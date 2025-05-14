@@ -17,11 +17,11 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Assets/hammy1.png\""
+"image": "\"res://Assets/hammycropped.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 0.75,
 "scene": ""
 }
 },

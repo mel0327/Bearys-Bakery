@@ -6,8 +6,10 @@ class_name Weapon extends Node2D
 @export_range(100.0, 2000.0, 1.0) var max_range := 2000.0
 @export_range(100.0, 3000.0, 1.0) var max_bullet_speed := 1500.0
 
+var is_dialogue_active := false
+
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("shoot"):
+	if not is_dialogue_active and Input.is_action_just_pressed("shoot"):
 		shoot()
 
 func shoot() -> void:
