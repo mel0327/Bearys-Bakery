@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b32qs1gr0erf0"]
+[gd_scene load_steps=7 format=3 uid="uid://b32qs1gr0erf0"]
 
-[ext_resource type="Script" path="res://pickup.gd" id="1_meybs"]
-[ext_resource type="Script" path="res://item_damage.gd" id="2_3ottc"]
+[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_meybs"]
+[ext_resource type="Script" path="res://Scripts/item_damage.gd" id="2_3ottc"]
+[ext_resource type="Texture2D" uid="uid://cjjqssvqkt2bu" path="res://Assets/redcandy.png" id="4_5q8q3"]
 [ext_resource type="Texture2D" uid="uid://bpu855v2kbiu0" path="res://Assets/Pink_Candy_PNG_Clipart.png" id="4_dyj50"]
 
 [sub_resource type="Resource" id="Resource_0s4ni"]
@@ -19,8 +20,10 @@ item = SubResource("Resource_0s4ni")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(135, 140)
-scale = Vector2(0.00800456, 0.00818105)
+position = Vector2(135.451, 139.596)
+scale = Vector2(1.89106, 2.60818)
+texture = ExtResource("4_5q8q3")
+region_rect = Rect2(97.5, 10.25, 46.5, 26.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(135, 140)
