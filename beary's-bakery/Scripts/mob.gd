@@ -4,11 +4,8 @@ class_name Mob extends CharacterBody2D
 @export var acceleration := 700.0
 @export var health := 100: set = set_health
 @export var damage := 1 
-@export var attack_cooldown := 0.5
-@export var time_since_last_attack := 0.0
 
 var _player: Player = null
-
 
 @onready var _detection_area: Area2D = %DetectionArea
 @onready var _hit_box: Area2D = %HitBox
@@ -55,7 +52,6 @@ func die() -> void:
 	_die_sound.finished.connect(queue_free)
 
 func _physics_process(delta: float) -> void:
-	time_since_last_attack += delta 
 	if _player == null:
 		velocity = velocity.move_toward(Vector2.ZERO, acceleration * delta)
 	else:
@@ -68,15 +64,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_animation()
 
-
 func take_damage(amount:int) -> void:
 	set_health(health-amount)
 
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	if body is Player and time_since_last_attack >= attack_cooldown:
+	if body is Player:
 		body.health -= damage
-		time_since_last_attack = 0.0
 	elif body is Bullet:
 		take_damage(body.damage)
 		body.queue_free()
@@ -84,12 +78,12 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body is Player:
-		_player = null
+		_player = body
 
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body is Player:
-		_player = null
+		_player = body
 
 
 func update_animation() -> void:
@@ -110,8 +104,3 @@ func update_animation() -> void:
 			animated_sprite.play("front")
 		else:
 			animated_sprite.play("back")
-			
-			
-			
-			
-			

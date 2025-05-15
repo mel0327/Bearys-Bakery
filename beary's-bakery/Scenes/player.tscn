@@ -136,10 +136,3 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_galb8")
 value = 50.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
-
-[node name="HurtTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-wait_time = 0.5
-one_shot = true
-
-[connection signal="timeout" from="HurtTimer" to="." method="_on_hurt_timer_timeout"]
