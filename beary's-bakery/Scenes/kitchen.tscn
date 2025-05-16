@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4c8dj8xaxfwc"]
+[gd_scene load_steps=12 format=3 uid="uid://b4c8dj8xaxfwc"]
 
 [ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
 [ext_resource type="Texture2D" uid="uid://ponpg5606318" path="res://Assets/kitchenfurniture.png" id="2_kg75v"]
 [ext_resource type="Texture2D" uid="uid://b0c6xava6xw67" path="res://Assets/island.png" id="3_x8ien"]
+[ext_resource type="PackedScene" uid="uid://u38ug5ggjb46" path="res://Scenes/jeorge.tscn" id="4_s6iya"]
+[ext_resource type="PackedScene" uid="uid://bg5pmqh3hbu6y" path="res://Scenes/james.tscn" id="5_yjenc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhah"]
 size = Vector2(808.5, 136)
@@ -74,3 +76,9 @@ shape = SubResource("RectangleShape2D_u2pwt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 position = Vector2(578, 700)
 shape = SubResource("RectangleShape2D_t7f2d")
+
+[node name="Jeorge" parent="." instance=ExtResource("4_s6iya")]
+position = Vector2(214, 391)
+
+[node name="James" parent="." instance=ExtResource("5_yjenc")]
+position = Vector2(900, 390)

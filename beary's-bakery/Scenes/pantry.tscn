@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://eub1w1xulk82"]
 
-[ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_ylhmk"]
-[ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_k57wk"]
+[ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
+[ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
@@ -15,9 +15,9 @@ size = Vector2(1184, 391)
 z_index = -1
 position = Vector2(581, 331)
 scale = Vector2(2.332, 1.74267)
-texture = ExtResource("1_ylhmk")
+texture = ExtResource("1_vcdcm")
 
-[node name="Hammy" parent="." instance=ExtResource("2_k57wk")]
+[node name="Hammy" parent="." instance=ExtResource("2_3nenv")]
 position = Vector2(592, 402)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
