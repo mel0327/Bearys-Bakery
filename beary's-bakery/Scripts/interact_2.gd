@@ -8,6 +8,7 @@ var is_player_near := false
 var player_reference
 
 
+
 func _ready() -> void:
 	label.visible = false
 	
@@ -25,8 +26,7 @@ func _unhandled_input(event: InputEvent):
 		
 		if player_reference:
 			
-			player_reference.get_node("Sprite2D").visible = false
-			player_reference.get_node("HealthBar").visible = false
+			player_reference.get_node("AnimatedSprite2D").visible = false
 			player_reference.pause_movement()
 
 		set_deferred("monitoring", false)
@@ -34,10 +34,10 @@ func _unhandled_input(event: InputEvent):
 
 func _on_dialogue_finished():
 	if player_reference:
-		player_reference.get_node("Sprite2D").visible = true
-		player_reference.get_node("HealthBar").visible = true
+		player_reference.get_node("AnimatedSprite2D").visible = true
 		player_reference.resume_movement()
-	#set_deferred("monitoring", true)
+		#set_deferred("monitoring", true)
+
 
 
 

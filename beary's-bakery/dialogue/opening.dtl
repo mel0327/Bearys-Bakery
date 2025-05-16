@@ -1,4 +1,4 @@
-#[background arg="res://Assets/cafe.png" fade="0.0"]
+[background arg="res://Assets/cafe.png" fade="0.0"]
 join BunBun left [animation="Slide In Up" wait="true"]
 BunBun: Hello, my name is BunBun! I just moved into Vanilla City!
 BunBun: I saw your sign outside. What do I have to do to be hired?
