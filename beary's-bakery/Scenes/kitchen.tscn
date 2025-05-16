@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://b4c8dj8xaxfwc"]
+
+[ext_resource type="Script" path="res://Scenes/kitchen.gd" id="1_2b2xi"]
+[ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
+[ext_resource type="Texture2D" uid="uid://ponpg5606318" path="res://Assets/kitchenfurniture.png" id="2_kg75v"]
+[ext_resource type="Texture2D" uid="uid://b0c6xava6xw67" path="res://Assets/island.png" id="3_x8ien"]
+[ext_resource type="PackedScene" uid="uid://u38ug5ggjb46" path="res://Scenes/jeorge.tscn" id="4_s6iya"]
+[ext_resource type="PackedScene" uid="uid://bg5pmqh3hbu6y" path="res://Scenes/james.tscn" id="5_yjenc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhah"]
+size = Vector2(808.5, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2in3"]
+size = Vector2(394, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgfuf"]
+size = Vector2(72, 672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_157hq"]
+size = Vector2(1160, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2pwt"]
+size = Vector2(82, 663.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7f2d"]
+size = Vector2(1157, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ntr"]
+size = Vector2(135, 175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp5x8"]
+size = Vector2(181.5, 177)
+
+[node name="kitchen" type="Node2D"]
+script = ExtResource("1_2b2xi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 328.5)
+scale = Vector2(2.296, 1.72533)
+texture = ExtResource("1_npwco")
+
+[node name="kitchenfurniture" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="kitchenfurniture"]
+position = Vector2(577, 326)
+scale = Vector2(2.292, 1.73333)
+texture = ExtResource("2_kg75v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kitchenfurniture"]
+position = Vector2(553.75, 313)
+shape = SubResource("RectangleShape2D_7hhah")
+
+[node name="island" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="island"]
+position = Vector2(584, 327)
+scale = Vector2(2.312, 1.728)
+texture = ExtResource("3_x8ien")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="island"]
+position = Vector2(540, 492)
+shape = SubResource("RectangleShape2D_i2in3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-34, 329)
+shape = SubResource("RectangleShape2D_mgfuf")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(570, 82)
+shape = SubResource("RectangleShape2D_157hq")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(1194, 322.25)
+shape = SubResource("RectangleShape2D_u2pwt")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(578, 700)
+shape = SubResource("RectangleShape2D_t7f2d")
+
+[node name="Jeorge" parent="." instance=ExtResource("4_s6iya")]
+position = Vector2(214, 391)
+
+[node name="James" parent="." instance=ExtResource("5_yjenc")]
+position = Vector2(900, 390)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(124, 591)
+
+[node name="SceneTransitionToPantry" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitionToPantry"]
+position = Vector2(74.5, 267.5)
+shape = SubResource("RectangleShape2D_j0ntr")
+
+[node name="SceneTransitionToBasement" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitionToBasement"]
+position = Vector2(1055.25, 266.5)
+shape = SubResource("RectangleShape2D_tp5x8")
+
+[connection signal="body_entered" from="SceneTransitionToPantry" to="." method="_on_scene_transition_to_pantry_body_entered"]
+[connection signal="body_entered" from="SceneTransitionToBasement" to="." method="_on_scene_transition_to_basement_body_entered"]

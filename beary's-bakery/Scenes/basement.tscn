@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpbtp62w7e1sf"]
+
+[ext_resource type="Script" path="res://Scenes/basement.gd" id="1_sxnyi"]
+[ext_resource type="Texture2D" uid="uid://ddrqgr6qt04du" path="res://Assets/bossscene.png" id="1_x3oau"]
+[ext_resource type="PackedScene" uid="uid://q0in37xtjbdw" path="res://Scenes/beary.tscn" id="2_qddad"]
+[ext_resource type="Texture2D" uid="uid://ceolak3g5fiud" path="res://Assets/redcake.png" id="4_jo522"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1drn"]
+size = Vector2(81, 673)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcdju"]
+size = Vector2(1164, 417)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyw6l"]
+size = Vector2(98, 655)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa23n"]
+size = Vector2(1207.5, 72.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r87t"]
+size = Vector2(60, 57)
+
+[node name="basement" type="Node2D"]
+script = ExtResource("1_sxnyi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 323.25)
+scale = Vector2(2.32, 1.71067)
+texture = ExtResource("1_x3oau")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-43.5, 326.5)
+shape = SubResource("RectangleShape2D_t1drn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(572, 198.5)
+shape = SubResource("RectangleShape2D_bcdju")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(1204, 322)
+shape = SubResource("RectangleShape2D_qyw6l")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(601, 682.75)
+shape = SubResource("RectangleShape2D_aa23n")
+
+[node name="Beary" parent="." instance=ExtResource("2_qddad")]
+position = Vector2(551, 377)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(182, 566)
+
+[node name="Cake" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Cake"]
+position = Vector2(1124, 567)
+scale = Vector2(2.86842, 3.13333)
+texture = ExtResource("4_jo522")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cake"]
+position = Vector2(1117, 565)
+shape = SubResource("RectangleShape2D_8r87t")
+
+[connection signal="body_entered" from="Cake" to="." method="_on_cake_body_entered"]

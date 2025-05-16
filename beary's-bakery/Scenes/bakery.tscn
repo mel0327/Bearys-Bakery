@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4ts4onycaw2m"]
+[gd_scene load_steps=13 format=3 uid="uid://b4ts4onycaw2m"]
 
 [ext_resource type="Texture2D" uid="uid://dpgvql0gesu0f" path="res://Assets/cafedraft2.png" id="1_iuncx"]
 [ext_resource type="Texture2D" uid="uid://cgnjiwgwneb5l" path="res://Assets/counterfull.png" id="2_kgak0"]
 [ext_resource type="Texture2D" uid="uid://cb81bppai50pj" path="res://Assets/table.png" id="3_onqwd"]
+[ext_resource type="Script" path="res://Scenes/scene_transition.gd" id="4_qnslb"]
+[ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="5_q4vdf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1pv2"]
 size = Vector2(333.386, 65.2941)
@@ -15,7 +17,7 @@ height = 112.047
 size = Vector2(99, 670)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhjt"]
-size = Vector2(1151, 228)
+size = Vector2(963.5, 228)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ammes"]
 size = Vector2(47, 664)
@@ -24,7 +26,7 @@ size = Vector2(47, 664)
 size = Vector2(1179, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca021"]
-size = Vector2(136, 153)
+size = Vector2(186, 232)
 
 [node name="bakery" type="Node2D"]
 
@@ -125,7 +127,7 @@ shape = SubResource("RectangleShape2D_ubwee")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(576, 116)
+position = Vector2(669.75, 116)
 shape = SubResource("RectangleShape2D_wvhjt")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -140,8 +142,14 @@ shape = SubResource("RectangleShape2D_ammes")
 position = Vector2(579.5, 679)
 shape = SubResource("RectangleShape2D_31t26")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SceneTransition" type="Area2D" parent="."]
+script = ExtResource("4_qnslb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(117, 153.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransition"]
+position = Vector2(92, 119)
 shape = SubResource("RectangleShape2D_ca021")
+
+[node name="Player" parent="." instance=ExtResource("5_q4vdf")]
+position = Vector2(346, 267)
+
+[connection signal="body_entered" from="SceneTransition" to="SceneTransition" method="_on_body_entered"]

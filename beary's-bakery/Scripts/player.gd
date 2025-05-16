@@ -15,11 +15,15 @@ func _ready() -> void:
 	health_bar.max_value = 4
 	health_bar.value = health
 	health_bar.visible = false
+	$WeaponPivot/Marker2D/Gun.visible = false
 
 func _physics_process(delta):
 	if can_move:
 		handle_movement(delta)
 		update_animation()
+		
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 
 func handle_movement(delta: float) -> void:
 
@@ -28,6 +32,8 @@ func handle_movement(delta: float) -> void:
 	var steering := desired_velocity - velocity
 	velocity += steering * drag_factor * delta
 	move_and_slide()
+	if velocity.length() < 10.0:
+		velocity = Vector2.ZERO
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
@@ -51,11 +57,13 @@ func resume_movement():
 
 func update_animation() -> void:
 	var last_motion = get_last_motion()
-	if last_motion.x == 0 and last_motion.y == 0:
+	
+	if last_motion.length() < 10.0:
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
 		return
-	if (abs(last_motion.x) > abs(last_motion.y)):	
+		
+	if (abs(last_motion.x) > abs(last_motion.y)):
 		if last_motion.x > 0:
 			#print ("right")
 			animated_sprite.flip_h = true
@@ -78,3 +86,12 @@ func update_animation() -> void:
 			if animated_sprite.animation != "back":
 				animated_sprite.play("back")
 	
+	
+func shoot():
+	$WeaponPivot/Marker2D/Gun.visible = true
+	await get_tree().create_timer(0.2).timeout
+	$WeaponPivot/Marker2D/Gun.visible = false
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		shoot()

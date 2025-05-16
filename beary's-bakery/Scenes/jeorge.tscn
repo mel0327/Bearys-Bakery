@@ -1,16 +1,67 @@
-[gd_scene load_steps=12 format=3 uid="uid://u38ug5ggjb46"]
+[gd_scene load_steps=17 format=3 uid="uid://u38ug5ggjb46"]
 
 [ext_resource type="Script" path="res://Scripts/jeorge.gd" id="1_quuhn"]
-[ext_resource type="Texture2D" uid="uid://dve3kbquuqvvo" path="res://Assets/cats.png" id="1_wc5w4"]
+[ext_resource type="Texture2D" uid="uid://cjx0fgf4fyh0t" path="res://Assets/jerogespritesheet.png" id="2_cd4bm"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_p0vjp"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_ysi8j"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_natdf"]
+atlas = ExtResource("2_cd4bm")
+region = Rect2(112, 124, 112, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr8td"]
+atlas = ExtResource("2_cd4bm")
+region = Rect2(112, 0, 112, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifu4f"]
+atlas = ExtResource("2_cd4bm")
+region = Rect2(0, 124, 112, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urmee"]
+atlas = ExtResource("2_cd4bm")
+region = Rect2(0, 0, 112, 124)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enufq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_natdf")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr8td")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifu4f")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urmee")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vgye"]
-radius = 27.0
-height = 92.0
+radius = 24.0
+height = 78.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bxxer"]
-radius = 104.695
+radius = 84.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v3nf3"]
 radius = 29.0
@@ -51,10 +102,12 @@ corner_radius_bottom_left = 4
 [node name="Jeorge" type="CharacterBody2D"]
 script = ExtResource("1_quuhn")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.5, -2.50001)
-scale = Vector2(0.0896226, 0.325521)
-texture = ExtResource("1_wc5w4")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(4, 1.49999)
+scale = Vector2(1.16071, 1.12097)
+sprite_frames = SubResource("SpriteFrames_enufq")
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
