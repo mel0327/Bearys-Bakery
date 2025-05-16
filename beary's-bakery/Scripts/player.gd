@@ -32,6 +32,8 @@ func handle_movement(delta: float) -> void:
 	var steering := desired_velocity - velocity
 	velocity += steering * drag_factor * delta
 	move_and_slide()
+	if velocity.length() < 10.0:
+		velocity = Vector2.ZERO
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
@@ -55,11 +57,13 @@ func resume_movement():
 
 func update_animation() -> void:
 	var last_motion = get_last_motion()
-	if last_motion.x == 0 and last_motion.y == 0:
+	
+	if last_motion.length() < 10.0:
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
 		return
-	if (abs(last_motion.x) > abs(last_motion.y)):	
+		
+	if (abs(last_motion.x) > abs(last_motion.y)):
 		if last_motion.x > 0:
 			#print ("right")
 			animated_sprite.flip_h = true
