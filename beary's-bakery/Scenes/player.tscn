@@ -122,7 +122,7 @@ script = ExtResource("4_jxq5n")
 position = Vector2(36, 0)
 scale = Vector2(0.25, 0.25)
 
-[node name="Sprite2D" type="Sprite2D" parent="WeaponPivot/Marker2D"]
+[node name="Gun" type="Sprite2D" parent="WeaponPivot/Marker2D"]
 position = Vector2(30, 5)
 texture = ExtResource("5_qcnbi")
 

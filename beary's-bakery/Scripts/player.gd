@@ -15,11 +15,15 @@ func _ready() -> void:
 	health_bar.max_value = 4
 	health_bar.value = health
 	health_bar.visible = false
+	$WeaponPivot/Marker2D/Gun.visible = false
 
 func _physics_process(delta):
 	if can_move:
 		handle_movement(delta)
 		update_animation()
+		
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 
 func handle_movement(delta: float) -> void:
 
@@ -78,3 +82,12 @@ func update_animation() -> void:
 			if animated_sprite.animation != "back":
 				animated_sprite.play("back")
 	
+	
+func shoot():
+	$WeaponPivot/Marker2D/Gun.visible = true
+	await get_tree().create_timer(0.2).timeout
+	$WeaponPivot/Marker2D/Gun.visible = false
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		shoot()

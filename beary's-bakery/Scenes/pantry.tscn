@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
-[ext_resource type="Texture2D" uid="uid://ceolak3g5fiud" path="res://Assets/redcake.png" id="4_fcwh0"]
+[ext_resource type="Texture2D" uid="uid://cgeehopf1vd1k" path="res://Assets/carrotcake.png" id="4_vvdsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
@@ -65,9 +65,9 @@ position = Vector2(121, 572)
 collision_layer = 16
 
 [node name="Sprite2D" type="Sprite2D" parent="cake"]
-position = Vector2(1143, 504)
-scale = Vector2(3.28947, 3.63333)
-texture = ExtResource("4_fcwh0")
+position = Vector2(1138.51, 498.883)
+scale = Vector2(2.99958, 3.23974)
+texture = ExtResource("4_vvdsn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cake"]
 position = Vector2(1138.5, 494)
