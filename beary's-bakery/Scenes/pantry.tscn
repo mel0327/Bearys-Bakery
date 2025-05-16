@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://eub1w1xulk82"]
+[gd_scene load_steps=8 format=3 uid="uid://eub1w1xulk82"]
 
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
+[ext_resource type="Texture2D" uid="uid://ceolak3g5fiud" path="res://Assets/redcake.png" id="4_fcwh0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b44w3"]
 size = Vector2(1184, 391)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pf17"]
+size = Vector2(65, 62)
 
 [node name="Pantry" type="Node2D"]
 script = ExtResource("1_0hpdc")
@@ -56,3 +60,17 @@ shape = SubResource("RectangleShape2D_b44w3")
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(121, 572)
+
+[node name="cake" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="cake"]
+position = Vector2(1143, 504)
+scale = Vector2(3.28947, 3.63333)
+texture = ExtResource("4_fcwh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake"]
+position = Vector2(1138.5, 494)
+shape = SubResource("RectangleShape2D_2pf17")
+
+[connection signal="body_entered" from="cake" to="." method="_on_cake_body_entered"]
