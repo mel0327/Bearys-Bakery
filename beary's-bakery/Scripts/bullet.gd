@@ -7,7 +7,7 @@ var is_dialogue_active := false
 @export var damage := 1
 
 
-var max_range := 1000.0
+var max_range := 250.0
 var _traveled_distance := 0.0
 
 
