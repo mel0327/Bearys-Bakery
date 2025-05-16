@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4c8dj8xaxfwc"]
+[gd_scene load_steps=14 format=3 uid="uid://b4c8dj8xaxfwc"]
 
+[ext_resource type="Script" path="res://Scenes/kitchen.gd" id="1_2b2xi"]
 [ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
 [ext_resource type="Texture2D" uid="uid://ponpg5606318" path="res://Assets/kitchenfurniture.png" id="2_kg75v"]
 [ext_resource type="Texture2D" uid="uid://b0c6xava6xw67" path="res://Assets/island.png" id="3_x8ien"]
@@ -10,7 +11,7 @@
 size = Vector2(808.5, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2in3"]
-size = Vector2(427, 102)
+size = Vector2(394, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgfuf"]
 size = Vector2(72, 672)
@@ -24,7 +25,11 @@ size = Vector2(82, 663.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7f2d"]
 size = Vector2(1157, 96)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ntr"]
+size = Vector2(135, 175)
+
 [node name="kitchen" type="Node2D"]
+script = ExtResource("1_2b2xi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 328.5)
@@ -42,15 +47,15 @@ texture = ExtResource("2_kg75v")
 position = Vector2(553.75, 313)
 shape = SubResource("RectangleShape2D_7hhah")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="island" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(576.5, 327)
-scale = Vector2(2.282, 1.728)
+[node name="Sprite2D" type="Sprite2D" parent="island"]
+position = Vector2(584, 327)
+scale = Vector2(2.312, 1.728)
 texture = ExtResource("3_x8ien")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(534.5, 492)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="island"]
+position = Vector2(540, 492)
 shape = SubResource("RectangleShape2D_i2in3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -82,3 +87,14 @@ position = Vector2(214, 391)
 
 [node name="James" parent="." instance=ExtResource("5_yjenc")]
 position = Vector2(900, 390)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(124, 591)
+
+[node name="SceneTransitionToPantry" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitionToPantry"]
+position = Vector2(74.5, 267.5)
+shape = SubResource("RectangleShape2D_j0ntr")
+
+[connection signal="body_entered" from="SceneTransitionToPantry" to="." method="_on_scene_transition_to_pantry_body_entered"]
