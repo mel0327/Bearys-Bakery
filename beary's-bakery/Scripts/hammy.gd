@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func _on_detection_area_body_entered(body: Node) -> void:
 	if body is Player:
+		_player = body
 		player_reference = body
 
 

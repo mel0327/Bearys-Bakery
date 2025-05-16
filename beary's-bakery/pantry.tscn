@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://eub1w1xulk82"]
 
-[ext_resource type="Texture2D" uid="uid://xhck51fkbncs" path="res://Assets/pantryyeslight.png" id="1_ylhmk"]
+[ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_ylhmk"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_k57wk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
