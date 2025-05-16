@@ -1,4 +1,5 @@
-# start w/ kitchen bg
+[background arg="res://Assets/onote.png" fade="0.5"]
+[wait time="1.0"]
 BunBun starts searching the kitchen, looking for anything else suspicious\
 They find dead bodies and jars filled with blood in the cabinets and fridges.
 join BunBun center [animation="Slide In Left"]

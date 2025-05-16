@@ -1,8 +1,9 @@
-extends Area2D
+class_name Interact extends Area2D
 
 
 @onready var play_dialogue = preload("res://Scenes/dialogue_2.tscn")
 @onready var label: Label = $Label
+@onready var sprite: Sprite2D = $Sprite2D
 
 var is_player_near := false
 var player_reference
@@ -10,7 +11,8 @@ var player_reference
 
 func _ready() -> void:
 	label.visible = false
-	
+	sprite.visible = true
+
 
 func _unhandled_input(event: InputEvent):
 	if not is_player_near:
@@ -29,6 +31,7 @@ func _unhandled_input(event: InputEvent):
 			player_reference.pause_movement()
 
 		set_deferred("monitoring", false)
+		sprite.visible = false
 
 
 func _on_dialogue_finished():

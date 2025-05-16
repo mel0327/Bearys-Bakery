@@ -35,18 +35,21 @@ Closing hour
 join Townsfolk3 center [animation="Zoom Center In" wait="true"]
 join Dexter leftmost [animation="Slide In Left" length="0.1" wait="true"]
 Townsfolk3: Excuse me! Have you seen my son?!
-update Townsfolk3 right [animation="Shake X" repeat="2"]
+update Townsfolk3 center [animation="Shake X" repeat="2"]
 Townsfolk3: He’s been missing for 2 days!!! He was last seen around here... please help...
 leave --All-- [animation="Instant Out" wait="true"]
-join Beary right [animation="Slide In Right" length="1.0"]
-join BunBun left [animation="Slide In Left"]
+join BunBun right [animation="Bounce In" length="0.3"]
+[wait time="1.0"]
+join Beary left [animation="Slide In Left" length="1.5"]
 Beary: BunBun you can go home and rest
 [wait time="1.0"]
 BunBun: Okay...
-update BunBun leftmost [move_time="0.2"]
+update BunBun rightmost [move_time="2.0"]
+[wait time="2.0"]
 leave --All-- [animation="Fade Out" length="1.0"]
 [wait time="1.0"]
 [background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
 [wait time="1.5"]
-CRASH
+As BunBun heads out they, hear a loud crash behind the dumpster and sees a black figure carrying a bag about their size.
+This was enough evidence for BunBun to start investigating.
 [end_timeline]
