@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://q0in37xtjbdw"]
+[gd_scene load_steps=18 format=3 uid="uid://q0in37xtjbdw"]
 
 [ext_resource type="Script" path="res://Scripts/beary.gd" id="1_1pxqb"]
 [ext_resource type="Texture2D" uid="uid://t6chb8sl86wn" path="res://Assets/bearyspritesheet.png" id="2_q5b07"]
@@ -18,10 +18,6 @@ atlas = ExtResource("2_q5b07")
 region = Rect2(112, 0, 112, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vb2c"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(0, 128, 112, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1coy4"]
 atlas = ExtResource("2_q5b07")
 region = Rect2(0, 128, 112, 128)
 
@@ -64,9 +60,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1coy4")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c5t1d")
 }],
@@ -127,7 +120,7 @@ unique_name_in_owner = true
 position = Vector2(2, -6)
 scale = Vector2(0.875, 0.859375)
 sprite_frames = SubResource("SpriteFrames_30dr5")
-animation = &"idle"
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
