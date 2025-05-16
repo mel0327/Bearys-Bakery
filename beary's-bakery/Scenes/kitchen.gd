@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var next_scene_path: String = "res://Scenes/pantry.tscn"
 
 func _ready() -> void:
 	var player_scene = preload("res://Scenes/player.tscn")
@@ -12,6 +11,12 @@ func _ready() -> void:
 
 func _on_scene_transition_to_pantry_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		if ResourceLoader.exists(next_scene_path):
-			get_tree().change_scene_to_file(next_scene_path)
+		if ResourceLoader.exists("res://Scenes/pantry.tscn"):
+			get_tree().change_scene_to_file("res://Scenes/pantry.tscn")
 		
+
+
+func _on_scene_transition_to_basement_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		if ResourceLoader.exists("res://Scenes/basement.tscn"):
+			get_tree().change_scene_to_file("res://Scenes/basement.tscn")

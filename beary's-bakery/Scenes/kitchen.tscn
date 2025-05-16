@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b4c8dj8xaxfwc"]
+[gd_scene load_steps=15 format=3 uid="uid://b4c8dj8xaxfwc"]
 
 [ext_resource type="Script" path="res://Scenes/kitchen.gd" id="1_2b2xi"]
 [ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
@@ -27,6 +27,9 @@ size = Vector2(1157, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ntr"]
 size = Vector2(135, 175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp5x8"]
+size = Vector2(181.5, 177)
 
 [node name="kitchen" type="Node2D"]
 script = ExtResource("1_2b2xi")
@@ -97,4 +100,11 @@ position = Vector2(124, 591)
 position = Vector2(74.5, 267.5)
 shape = SubResource("RectangleShape2D_j0ntr")
 
+[node name="SceneTransitionToBasement" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitionToBasement"]
+position = Vector2(1055.25, 266.5)
+shape = SubResource("RectangleShape2D_tp5x8")
+
 [connection signal="body_entered" from="SceneTransitionToPantry" to="." method="_on_scene_transition_to_pantry_body_entered"]
+[connection signal="body_entered" from="SceneTransitionToBasement" to="." method="_on_scene_transition_to_basement_body_entered"]

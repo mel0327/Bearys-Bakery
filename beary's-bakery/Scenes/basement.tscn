@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpbtp62w7e1sf"]
+[gd_scene load_steps=8 format=3 uid="uid://dpbtp62w7e1sf"]
 
+[ext_resource type="Script" path="res://Scenes/basement.gd" id="1_sxnyi"]
 [ext_resource type="Texture2D" uid="uid://ddrqgr6qt04du" path="res://Assets/bossscene.png" id="1_x3oau"]
 [ext_resource type="PackedScene" uid="uid://q0in37xtjbdw" path="res://Scenes/beary.tscn" id="2_qddad"]
 
@@ -16,6 +17,7 @@ size = Vector2(98, 655)
 size = Vector2(1207.5, 72.5)
 
 [node name="basement" type="Node2D"]
+script = ExtResource("1_sxnyi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 323.25)
@@ -47,4 +49,7 @@ position = Vector2(601, 682.75)
 shape = SubResource("RectangleShape2D_aa23n")
 
 [node name="Beary" parent="." instance=ExtResource("2_qddad")]
-position = Vector2(637, 402)
+position = Vector2(551, 377)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(182, 566)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://eub1w1xulk82"]
+[gd_scene load_steps=6 format=3 uid="uid://eub1w1xulk82"]
 
+[ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
 
@@ -10,6 +11,7 @@ size = Vector2(41.7068, 1179.08)
 size = Vector2(1184, 391)
 
 [node name="Pantry" type="Node2D"]
+script = ExtResource("1_0hpdc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -51,3 +53,6 @@ shape = SubResource("RectangleShape2D_wsiey")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 position = Vector2(588, 185.5)
 shape = SubResource("RectangleShape2D_b44w3")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(121, 572)
