@@ -15,7 +15,7 @@ height = 112.047
 size = Vector2(99, 670)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhjt"]
-size = Vector2(1151, 238)
+size = Vector2(1151, 228)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ammes"]
 size = Vector2(47, 664)
@@ -125,7 +125,7 @@ shape = SubResource("RectangleShape2D_ubwee")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(576, 121)
+position = Vector2(576, 116)
 shape = SubResource("RectangleShape2D_wvhjt")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]

@@ -7,7 +7,7 @@
 size = Vector2(41.7068, 1179.08)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b44w3"]
-size = Vector2(1190, 384)
+size = Vector2(1184, 391)
 
 [node name="Pantry" type="Node2D"]
 
@@ -44,11 +44,10 @@ shape = SubResource("RectangleShape2D_wsiey")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 position = Vector2(583.004, -22.6466)
 rotation = 1.57639
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wsiey")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-position = Vector2(585, 182)
+position = Vector2(588, 185.5)
 shape = SubResource("RectangleShape2D_b44w3")
