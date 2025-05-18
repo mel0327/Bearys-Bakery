@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/basement.tscn" id="2_yxg0o"]
 [ext_resource type="PackedScene" path="res://Scenes/pantry.tscn" id="3_66jjv"]
 [ext_resource type="PackedScene" uid="uid://8tp3p3hot5g" path="res://Scenes/pause_menu.tscn" id="4_llvc3"]
-[ext_resource type="PackedScene" path="res://Scenes/kitchen.tscn" id="4_siym2"]
+[ext_resource type="PackedScene" uid="uid://inmtk547o24v" path="res://Scenes/kitchen.tscn" id="4_siym2"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -23,10 +23,9 @@ script = ExtResource("1_ke72l")
 
 [node name="kitchen" parent="." instance=ExtResource("4_siym2")]
 
-[node name="PauseMenu" parent="." instance=ExtResource("4_llvc3")]
-layout_mode = 1
-
 [node name="bakery" parent="." instance=ExtResource("1_mpieq")]
 
 [node name="MainMenu" parent="." instance=ExtResource("2_cx8yx")]
 layout_mode = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_llvc3")]

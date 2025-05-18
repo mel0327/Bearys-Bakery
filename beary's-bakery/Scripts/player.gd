@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 
 @export var speed := 1000.0
 @export var drag_factor := 10.0
-@export var max_health := 5
+@export var max_health := 20
 
 var health := max_health: set = set_health
 var can_move = true

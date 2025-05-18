@@ -1,5 +1,11 @@
 extends Node2D
 
+func _input(event):
+	if event.is_action_pressed("esc"):
+		if get_tree().paused:
+			PauseMenu.resume()
+		else:
+			PauseMenu.pause()
 
 func _ready() -> void:
 	var player_scene = preload("res://Scenes/player.tscn")

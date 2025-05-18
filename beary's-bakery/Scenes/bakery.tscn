@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4ts4onycaw2m"]
+[gd_scene load_steps=14 format=3 uid="uid://b4ts4onycaw2m"]
 
 [ext_resource type="Texture2D" uid="uid://dpgvql0gesu0f" path="res://Assets/cafedraft2.png" id="1_iuncx"]
+[ext_resource type="Script" path="res://Scenes/bakery.gd" id="1_rrgob"]
 [ext_resource type="Texture2D" uid="uid://cgnjiwgwneb5l" path="res://Assets/counterfull.png" id="2_kgak0"]
 [ext_resource type="Texture2D" uid="uid://cb81bppai50pj" path="res://Assets/table.png" id="3_onqwd"]
 [ext_resource type="Script" path="res://Scenes/scene_transition.gd" id="4_qnslb"]
@@ -29,6 +30,7 @@ size = Vector2(1179, 48)
 size = Vector2(186, 232)
 
 [node name="bakery" type="Node2D"]
+script = ExtResource("1_rrgob")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(575, 329.25)
