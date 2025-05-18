@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://8tp3p3hot5g"]
+
+[ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_j0sn4"]
+[ext_resource type="Theme" uid="uid://80x520lkkcuc" path="res://main_menu_button.tres" id="1_tjfab"]
+[ext_resource type="Texture2D" uid="uid://dqgrmdd0uvp68" path="res://Assets/headshotbeary.png" id="2_1bb6b"]
+[ext_resource type="Texture2D" uid="uid://oa0838fntcd1" path="res://Assets/headshotbunbun.png" id="3_rjcdf"]
+[ext_resource type="Texture2D" uid="uid://cgeehopf1vd1k" path="res://Assets/carrotcake.png" id="4_51fy6"]
+[ext_resource type="FontFile" uid="uid://b4vlhabd0nxij" path="res://Assets/CHERI___.TTF" id="4_pstsb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic3n6"]
+bg_color = Color(0.859907, 0.508238, 0.777694, 1)
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j0sn4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.5
+offset_top = -244.0
+offset_right = 233.5
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ic3n6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = 49.0
+offset_right = 107.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_tjfab")
+text = "Resume"
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_tjfab")
+text = "Restart"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_tjfab")
+text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(438, 262)
+scale = Vector2(0.487156, 0.515584)
+texture = ExtResource("2_1bb6b")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(717, 269)
+scale = Vector2(0.386697, 0.403247)
+texture = ExtResource("3_rjcdf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(576, 296)
+scale = Vector2(4.49193, 4.55769)
+texture = ExtResource("4_51fy6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 107.0
+offset_right = 706.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("4_pstsb")
+theme_override_font_sizes/font_size = 80
+text = "Paused"
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
