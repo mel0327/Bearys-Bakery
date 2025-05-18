@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct78jtbd3lecq"]
+[gd_scene load_steps=4 format=3 uid="uid://ct78jtbd3lecq"]
 
+[ext_resource type="Script" path="res://game.gd" id="1_ke72l"]
 [ext_resource type="PackedScene" uid="uid://b4ts4onycaw2m" path="res://Scenes/bakery.tscn" id="1_mpieq"]
 [ext_resource type="PackedScene" uid="uid://q8i4rhigp7s1" path="res://Scenes/main_menu.tscn" id="2_cx8yx"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ke72l")
 
 [node name="bakery" parent="." instance=ExtResource("1_mpieq")]
 

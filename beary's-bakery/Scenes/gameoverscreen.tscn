@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://e57abvqfd07d"]
 
-[ext_resource type="Script" path="res://Scripts/gameover.gd" id="1_al07x"]
-[ext_resource type="Texture2D" uid="uid://j15l54e8vpd1" path="res://Scenes/gameover2.png" id="2_wxb1r"]
+[ext_resource type="Script" path="res://Scripts/gameoverscreen.gd" id="1_23q67"]
+[ext_resource type="Texture2D" uid="uid://j15l54e8vpd1" path="res://Scenes/gameover2.png" id="2_xm850"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icjl6"]
 bg_color = Color(0.848512, 0.691284, 0.894454, 1)
@@ -21,7 +21,7 @@ Button/colors/font_hover_color = Color(0.87451, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0.87451, 0, 0, 1)
 
 [node name="GameOverScreen" type="CanvasLayer"]
-script = ExtResource("1_al07x")
+script = ExtResource("1_23q67")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 self_modulate = Color(0, 0, 0, 1)
@@ -75,7 +75,7 @@ text = "QUIT"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(582.75, 260.125)
 scale = Vector2(1.61184, 1.43716)
-texture = ExtResource("2_wxb1r")
+texture = ExtResource("2_xm850")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

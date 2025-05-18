@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+
 @export var speed := 1000.0
 @export var drag_factor := 10.0
 @export var max_health := 5
@@ -47,6 +48,9 @@ func set_health(new_health: int) -> void:
 		die()
 
 func die() -> void:
+	var game_over_scene = preload("res://Scenes/gameoverscreen.tscn")
+	var game_over_instance = game_over_scene.instantiate()
+	get_tree().current_scene.add_child(game_over_instance)
 	queue_free()
 
 func pause_movement():
