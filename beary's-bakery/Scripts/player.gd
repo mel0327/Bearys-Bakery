@@ -13,7 +13,7 @@ var can_move = true
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
 
 func _ready() -> void:
-	health_bar.max_value = 4
+	health_bar.max_value = max_health
 	health_bar.value = health
 	health_bar.visible = false
 	$WeaponPivot/Marker2D/Gun.visible = false

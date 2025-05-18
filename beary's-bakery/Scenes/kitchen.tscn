@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://inmtk547o24v"]
+[gd_scene load_steps=16 format=3 uid="uid://inmtk547o24v"]
 
 [ext_resource type="Script" path="res://Scenes/kitchen.gd" id="1_2b2xi"]
 [ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0c6xava6xw67" path="res://Assets/island.png" id="3_x8ien"]
 [ext_resource type="PackedScene" uid="uid://u38ug5ggjb46" path="res://Scenes/jeorge.tscn" id="4_s6iya"]
 [ext_resource type="PackedScene" uid="uid://bg5pmqh3hbu6y" path="res://Scenes/james.tscn" id="5_yjenc"]
+[ext_resource type="AudioStream" uid="uid://bsclvd3hnnjvc" path="res://Sounds/750226__nancy_sinclair__suspenseful-music-box.mp3" id="7_5oiuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hhah"]
 size = Vector2(808.5, 136)
@@ -105,6 +106,13 @@ shape = SubResource("RectangleShape2D_j0ntr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitionToBasement"]
 position = Vector2(1055.25, 266.5)
 shape = SubResource("RectangleShape2D_tp5x8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5oiuo")
+
+[node name="LoopTimer" type="Timer" parent="."]
+wait_time = 64.06
+autostart = true
 
 [connection signal="body_entered" from="SceneTransitionToPantry" to="." method="_on_scene_transition_to_pantry_body_entered"]
 [connection signal="body_entered" from="SceneTransitionToBasement" to="." method="_on_scene_transition_to_basement_body_entered"]

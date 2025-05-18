@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://game.gd" id="1_ke72l"]
 [ext_resource type="PackedScene" uid="uid://b4ts4onycaw2m" path="res://Scenes/bakery.tscn" id="1_mpieq"]
 [ext_resource type="PackedScene" uid="uid://q8i4rhigp7s1" path="res://Scenes/main_menu.tscn" id="2_cx8yx"]
-[ext_resource type="PackedScene" path="res://Scenes/basement.tscn" id="2_yxg0o"]
-[ext_resource type="PackedScene" path="res://Scenes/pantry.tscn" id="3_66jjv"]
+[ext_resource type="PackedScene" uid="uid://cmny10w18bgjm" path="res://Scenes/basement.tscn" id="2_yxg0o"]
+[ext_resource type="PackedScene" uid="uid://dn1t2yt4i62c3" path="res://Scenes/pantry.tscn" id="3_66jjv"]
 [ext_resource type="PackedScene" uid="uid://8tp3p3hot5g" path="res://Scenes/pause_menu.tscn" id="4_llvc3"]
 [ext_resource type="PackedScene" uid="uid://inmtk547o24v" path="res://Scenes/kitchen.tscn" id="4_siym2"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b4ts4onycaw2m"]
+[gd_scene load_steps=15 format=3 uid="uid://b4ts4onycaw2m"]
 
 [ext_resource type="Texture2D" uid="uid://dpgvql0gesu0f" path="res://Assets/cafedraft2.png" id="1_iuncx"]
 [ext_resource type="Script" path="res://Scenes/bakery.gd" id="1_rrgob"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cb81bppai50pj" path="res://Assets/table.png" id="3_onqwd"]
 [ext_resource type="Script" path="res://Scenes/scene_transition.gd" id="4_qnslb"]
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="5_q4vdf"]
+[ext_resource type="AudioStream" uid="uid://df0jqdx2c8lt" path="res://Sounds/521785__tkky__110-cute-keys.wav" id="7_7owxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1pv2"]
 size = Vector2(333.386, 65.2941)
@@ -153,5 +154,12 @@ shape = SubResource("RectangleShape2D_ca021")
 
 [node name="Player" parent="." instance=ExtResource("5_q4vdf")]
 position = Vector2(346, 267)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7owxx")
+
+[node name="LoopTimer" type="Timer" parent="."]
+wait_time = 17.46
+autostart = true
 
 [connection signal="body_entered" from="SceneTransition" to="SceneTransition" method="_on_body_entered"]

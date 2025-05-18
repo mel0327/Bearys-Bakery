@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://eub1w1xulk82"]
+[gd_scene load_steps=9 format=3 uid="uid://dn1t2yt4i62c3"]
 
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
 [ext_resource type="Texture2D" uid="uid://cgeehopf1vd1k" path="res://Assets/carrotcake.png" id="4_vvdsn"]
+[ext_resource type="AudioStream" uid="uid://5upehuibccer" path="res://Sounds/747941__viramiller__intense-music-for-suspenseful-scenes.mp3" id="5_q3llf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
@@ -72,5 +73,11 @@ texture = ExtResource("4_vvdsn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cake"]
 position = Vector2(1138.5, 494)
 shape = SubResource("RectangleShape2D_2pf17")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_q3llf")
+
+[node name="LoopTimer" type="Timer" parent="."]
+wait_time = 31.32
 
 [connection signal="body_entered" from="cake" to="." method="_on_cake_body_entered"]

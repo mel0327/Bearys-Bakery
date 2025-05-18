@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://q8i4rhigp7s1"]
+[gd_scene load_steps=7 format=3 uid="uid://q8i4rhigp7s1"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_l3i6r"]
 [ext_resource type="Texture2D" uid="uid://bdiequ3i6lg24" path="res://Assets/startbetaTest1.png" id="2_e1twl"]
 [ext_resource type="Theme" uid="uid://80x520lkkcuc" path="res://main_menu_button.tres" id="3_m0vmb"]
 [ext_resource type="FontFile" uid="uid://b4vlhabd0nxij" path="res://Assets/CHERI___.TTF" id="4_1hbn1"]
 [ext_resource type="PackedScene" uid="uid://cmn230kak7r3m" path="res://Scenes/options_menu.tscn" id="4_46ud3"]
+[ext_resource type="AudioStream" uid="uid://cckdgqsyvmdsm" path="res://Sounds/797899__freemusicstudio708__bouncybubblepop.mp3" id="6_bsnho"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -66,6 +67,12 @@ text = "Exit"
 [node name="OptionsMenu" parent="." instance=ExtResource("4_46ud3")]
 visible = false
 layout_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bsnho")
+
+[node name="LoopTimer" type="Timer" parent="."]
+wait_time = 214.13
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

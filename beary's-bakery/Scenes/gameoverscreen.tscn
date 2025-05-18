@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://e57abvqfd07d"]
+[gd_scene load_steps=7 format=3 uid="uid://e57abvqfd07d"]
 
 [ext_resource type="Script" path="res://Scripts/gameoverscreen.gd" id="1_23q67"]
 [ext_resource type="Texture2D" uid="uid://j15l54e8vpd1" path="res://Scenes/gameover2.png" id="2_xm850"]
+[ext_resource type="AudioStream" uid="uid://beu4188t4oxha" path="res://Sounds/492535__soundflakes__spear-penetration.wav" id="3_7ly51"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icjl6"]
 bg_color = Color(0.848512, 0.691284, 0.894454, 1)
@@ -76,6 +77,9 @@ text = "QUIT"
 position = Vector2(603, 260)
 scale = Vector2(1.61184, 1.43716)
 texture = ExtResource("2_xm850")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7ly51")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
