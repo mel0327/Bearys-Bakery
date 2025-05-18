@@ -13,10 +13,14 @@ var fade_duration := 1.5
 @onready var start_level = preload("res://Scenes/bakery.tscn")
 
 func _ready() -> void:
+	for node in get_tree().get_root().get_children():
+		if node != self and node.has_node("AudioStreamPlayer"):
+			node.get_node("AudioStreamPlayer").stop()
+
 	music.stop()
-	handle_connecting_signals()
 	music.volume_db = 0
 	music.play()
+	handle_connecting_signals()
 	loop_timer.timeout.connect(_on_loop_timer_timeout)
 
 func on_start_button_pressed() -> void:

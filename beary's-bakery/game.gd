@@ -2,6 +2,7 @@ extends Control
 
 @onready var pause_menu_scene = preload("res://Scenes/pause_menu.tscn")
 var pause_menu: CanvasLayer
+var current_scene: Node = null
 
 func _ready() -> void:
 	pause_menu = pause_menu_scene.instantiate()
@@ -27,3 +28,10 @@ func _unpause_game():
 	get_tree().paused = false
 	pause_menu.hide()
 	
+	
+func load_scene(scene_path: String) -> void:
+	if current_scene and current_scene.is_inside_tree():
+		current_scene.queue_free()
+		
+	current_scene = load(scene_path).instantiate()
+	add_child(current_scene)

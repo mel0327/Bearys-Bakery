@@ -20,6 +20,9 @@ func _ready() -> void:
 	var spawn_point = $SpawnPoint
 	player.global_position = spawn_point.global_position
 	add_child(player)
+	for node in get_tree().get_root().get_children():
+		if node != self and node.has_node("AudioStreamPlayer"):
+			node.get_node("AudioStreamPlayer").stop()
 	music.volume_db = 0
 	music.play()
 	loop_timer.timeout.connect(_on_loop_timer_timeout)

@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ct78jtbd3lecq"]
+[gd_scene load_steps=4 format=3 uid="uid://ct78jtbd3lecq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ke72l"]
-[ext_resource type="PackedScene" uid="uid://b4ts4onycaw2m" path="res://Scenes/bakery.tscn" id="1_mpieq"]
 [ext_resource type="PackedScene" uid="uid://q8i4rhigp7s1" path="res://Scenes/main_menu.tscn" id="2_cx8yx"]
-[ext_resource type="PackedScene" uid="uid://cmny10w18bgjm" path="res://Scenes/basement.tscn" id="2_yxg0o"]
-[ext_resource type="PackedScene" uid="uid://dn1t2yt4i62c3" path="res://Scenes/pantry.tscn" id="3_66jjv"]
 [ext_resource type="PackedScene" uid="uid://8tp3p3hot5g" path="res://Scenes/pause_menu.tscn" id="4_llvc3"]
-[ext_resource type="PackedScene" uid="uid://inmtk547o24v" path="res://Scenes/kitchen.tscn" id="4_siym2"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -16,14 +12,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ke72l")
-
-[node name="basement" parent="." instance=ExtResource("2_yxg0o")]
-
-[node name="Pantry" parent="." instance=ExtResource("3_66jjv")]
-
-[node name="kitchen" parent="." instance=ExtResource("4_siym2")]
-
-[node name="bakery" parent="." instance=ExtResource("1_mpieq")]
 
 [node name="MainMenu" parent="." instance=ExtResource("2_cx8yx")]
 layout_mode = 1

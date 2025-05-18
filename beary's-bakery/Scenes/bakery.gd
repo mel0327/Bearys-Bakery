@@ -12,8 +12,11 @@ func _input(event):
 		else:
 			PauseMenu.pause()
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
+	for node in get_tree().get_root().get_children():
+		if node != self and node.has_node("AudioStreamPlayer"):
+			node.get_node("AudioStreamPlayer").stop()
 	music.volume_db = 0
 	music.play()
 	loop_timer.timeout.connect(_on_loop_timer_timeout)
