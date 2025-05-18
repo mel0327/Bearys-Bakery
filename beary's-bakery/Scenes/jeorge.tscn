@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://u38ug5ggjb46"]
+[gd_scene load_steps=19 format=3 uid="uid://u38ug5ggjb46"]
 
 [ext_resource type="Script" path="res://Scripts/jeorge.gd" id="1_quuhn"]
 [ext_resource type="Texture2D" uid="uid://cjx0fgf4fyh0t" path="res://Assets/jerogespritesheet.png" id="2_cd4bm"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_p0vjp"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_ysi8j"]
+[ext_resource type="AudioStream" uid="uid://br3bfo8mgrcod" path="res://Sounds/118792__lmbubec__1_knife_slash_a.wav" id="5_616c3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_natdf"]
 atlas = ExtResource("2_cd4bm")
@@ -100,6 +101,12 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u42p4"]
+playback_mode = 1
+random_volume_offset_db = 6.0
+streams_count = 1
+stream_0/stream = ExtResource("5_616c3")
+
 [node name="Jeorge" type="CharacterBody2D"]
 script = ExtResource("1_quuhn")
 
@@ -146,6 +153,11 @@ theme_override_styles/background = SubResource("StyleBoxFlat_cl3c1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_msoun")
 value = 100.0
 show_percentage = false
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_u42p4")
+volume_db = 10.0
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

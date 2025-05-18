@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://d4h3qwfkog4s6"]
+[gd_scene load_steps=17 format=3 uid="uid://d4h3qwfkog4s6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_bpgu4"]
 [ext_resource type="PackedScene" uid="uid://dpwyyjtcwfss1" path="res://Scenes/weapon.tscn" id="4_1khfd"]
 [ext_resource type="Script" path="res://Scripts/weapon_pivot.gd" id="4_jxq5n"]
 [ext_resource type="Texture2D" uid="uid://fggvotxo7nj6" path="res://Assets/pistol.png" id="5_qcnbi"]
+[ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="6_8lrxq"]
 [ext_resource type="Texture2D" uid="uid://cayyv3pexx6s3" path="res://Assets/bunbunspritesheet.png" id="6_iy0yx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_61esy"]
@@ -96,6 +97,11 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pv7pq"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("6_8lrxq")
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
 motion_mode = 1
@@ -137,3 +143,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_galb8")
 value = 50.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_pv7pq")
+volume_db = 6.0

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxu755suyt7ne"]
+[gd_scene load_steps=19 format=3 uid="uid://bxu755suyt7ne"]
 
 [ext_resource type="Script" path="res://Scripts/hammy.gd" id="1_l3e5u"]
 [ext_resource type="Texture2D" uid="uid://bi838oti1ig8r" path="res://Assets/hammyspritesheet.png" id="2_817nc"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
+[ext_resource type="AudioStream" uid="uid://br3bfo8mgrcod" path="res://Sounds/118792__lmbubec__1_knife_slash_a.wav" id="5_y7fy4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pylve"]
 atlas = ExtResource("2_817nc")
@@ -99,6 +100,12 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0xogd"]
+playback_mode = 1
+random_volume_offset_db = 6.0
+streams_count = 1
+stream_0/stream = ExtResource("5_y7fy4")
+
 [node name="Hammy" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_l3e5u")
@@ -147,6 +154,11 @@ theme_override_styles/background = SubResource("StyleBoxFlat_uv7v5")
 theme_override_styles/fill = SubResource("StyleBoxFlat_wmhq6")
 value = 100.0
 show_percentage = false
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_0xogd")
+volume_db = 10.0
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

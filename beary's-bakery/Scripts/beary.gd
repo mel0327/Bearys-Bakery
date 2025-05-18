@@ -13,4 +13,5 @@ func _on_detection_area_body_entered(body: Node) -> void:
 		
 func _on_hit_box_body_entered(body: Node) -> void:
 	if body is Player:
-		body.health -= damage
+		body.set_health(body.health - damage)
+		_attack_sound.play()

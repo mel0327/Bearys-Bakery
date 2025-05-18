@@ -11,6 +11,7 @@ var can_move = true
 @onready var health_bar: ProgressBar = %HealthBar
 @onready var collision_shape_2d: CollisionShape2D = %CollisionShape2D
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var _hurt_sound: AudioStreamPlayer = %HurtSound
 
 func _ready() -> void:
 	health_bar.max_value = max_health
@@ -43,6 +44,7 @@ func set_health(new_health: int) -> void:
 	
 	if new_health < previous_health:
 		health_bar.visible = true
+		_hurt_sound.play()
 		
 	if health == 0:
 		die()

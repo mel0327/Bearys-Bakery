@@ -13,13 +13,14 @@ var _player: Player = null
 @onready var _die_sound: AudioStreamPlayer = %DieSound
 @onready var health_bar: ProgressBar = %HealthBar
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
-
+@onready var _attack_sound: AudioStreamPlayer = %AttackSound
 
 func _ready() -> void:
 	health_bar.visible = false
 	_detection_area.body_entered.connect(_on_detection_area_body_entered)
 	_detection_area.body_exited.connect(_on_detection_area_body_exited)
 	_hit_box.body_entered.connect(_on_hit_box_body_entered)
+	
 
 
 func set_health(new_health: int) -> void:
@@ -70,7 +71,9 @@ func take_damage(amount:int) -> void:
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body is Player:
-		body.health -= damage
+		print("Player hit — playing sound.")
+		body.set_health(body.health - damage)
+		_attack_sound.play()
 	elif body is Bullet:
 		take_damage(body.damage)
 		body.queue_free()
