@@ -8,7 +8,6 @@ class_name Pickup extends Area2D
 
 func _ready() -> void:
 	set_item(item)
-
 	body_entered.connect(func (body: Node2D) -> void:
 		if body is Player:
 			item.use(body)
@@ -26,5 +25,5 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 func set_item(value: Item) -> void:
 	item = value
-	if _sprite_2d != null:
+	if _sprite_2d != null and item.texture != null:
 		_sprite_2d.texture = item.texture

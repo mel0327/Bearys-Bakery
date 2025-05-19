@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn1t2yt4i62c3"]
+[gd_scene load_steps=11 format=3 uid="uid://dn1t2yt4i62c3"]
 
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
 [ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nenv"]
 [ext_resource type="Texture2D" uid="uid://cgeehopf1vd1k" path="res://Assets/carrotcake.png" id="4_vvdsn"]
 [ext_resource type="AudioStream" uid="uid://5upehuibccer" path="res://Sounds/747941__viramiller__intense-music-for-suspenseful-scenes.mp3" id="5_q3llf"]
+[ext_resource type="PackedScene" uid="uid://8kprld2q6fj4" path="res://Scenes/pickupspeed.tscn" id="6_kdh6y"]
+[ext_resource type="PackedScene" uid="uid://dmuhxvssra8nw" path="res://Scenes/pickuphealth.tscn" id="7_uophr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
@@ -79,5 +81,14 @@ stream = ExtResource("5_q3llf")
 
 [node name="LoopTimer" type="Timer" parent="."]
 wait_time = 31.32
+
+[node name="PickupSpeed" parent="." instance=ExtResource("6_kdh6y")]
+position = Vector2(794, 310)
+
+[node name="PickupHealth" parent="." instance=ExtResource("7_uophr")]
+position = Vector2(168, 448)
+
+[node name="PickupHealth2" parent="." instance=ExtResource("7_uophr")]
+position = Vector2(577, 575)
 
 [connection signal="body_entered" from="cake" to="." method="_on_cake_body_entered"]

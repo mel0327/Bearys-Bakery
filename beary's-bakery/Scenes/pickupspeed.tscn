@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://8kprld2q6fj4"]
 
-[ext_resource type="Script" path="res://pickup.gd" id="1_usflu"]
-[ext_resource type="Script" path="res://item_speed.gd" id="2_cfoi4"]
-[ext_resource type="Texture2D" uid="uid://g64cp5f5tfwa" path="res://Assets/Blue_Candy_PNG_Clipart.png" id="3_nynrh"]
+[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_usflu"]
+[ext_resource type="Script" path="res://Scripts/item_speed.gd" id="2_cfoi4"]
+[ext_resource type="Texture2D" uid="uid://b7xjy6wx3d1xn" path="res://Assets/bluecandy.png" id="3_85n0r"]
 
 [sub_resource type="Resource" id="Resource_upu7b"]
 script = ExtResource("2_cfoi4")
 speed_amount = 1000
 display_name = ""
-texture = ExtResource("3_nynrh")
+texture = ExtResource("3_85n0r")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q6fbf"]
 radius = 16.1555
@@ -19,9 +19,9 @@ item = SubResource("Resource_upu7b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(135, 140)
-scale = Vector2(0.00767188, 0.00784951)
-texture = ExtResource("3_nynrh")
+position = Vector2(137, 140)
+scale = Vector2(1.82222, 2.33333)
+texture = ExtResource("3_85n0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(135, 140)
