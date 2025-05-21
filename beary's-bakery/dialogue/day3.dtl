@@ -1,7 +1,23 @@
 [background arg="res://Assets/cafe.png" fade="0.0"]
-The next day when BunBun walked into Beary’s Bakery, Hammy’s body was gone. BunBun continued work like nothing happened until the end of their shift.
+The next day, BunBun clocks in and acts normally.
+As they walk in, they overhear Beary conversing with the twins.
+join Jeorge rightmost [animation="Slide In Right" length="1.5"]
+join Beary center [animation="Slide In Left" length="1.5"]
+join James leftmost  [animation="Slide In Left" length="1.5" wait="true"]
+Beary: Hammy hasn't been responding to my calls, where could he be?
+Jeorge: Maybe he quit.
+James: What if he ran away...
+leave --All-- [animation="Instant Out"]
 join BunBun center [animation="Slide In Left" length="1.5" wait="true"]
+BunBun continued work like nothing happened until the end of their shift.
+leave BunBun
+[background arg="res://Assets/Black_BG_1-01.webp" fade="2.0" transition="Push Down"]
+[wait time="1.5"]
+Night time
+[background arg="res://Assets/cafe.png" fade="2.0" transition="Simple Fade"]
+[wait time="1.0"]
 BunBun decides to break into the kitchen.
+join BunBun center [animation="Fade In Up" wait="true"]
 label redo code
 [text_input text="Enter the 4-digit code" var="response"]
 if {response} != "1234":
@@ -14,8 +30,14 @@ join Jeorge rightmost [z_index="-1"]
 [wait time="0.5"]
 update BunBun leftmost [animation="Bounce" length="0.2" wait="true" move_time="0.3"]
 James: Who allowed you to come in.
-BunBun: Who are you? Tell me what’s going on!
+BunBun: What's going on here?!
 BunBun points their gun at James
+James: None of your buisness.
+BunBun:Why are you kidnapping residents?
+Jeorge:I want to hear your theory.
+James:Don’t entertain them, Jeorge.
+Jeorge:You’re no fun.
+Jeorge:Fine, let's do this quickly.
 Jeorge: Get out before things get messy.
 BunBun doesn’t move. James and Jeorge charge at BunBun.
 update Jeorge center [animation="Shake X" length="0.6" move_time="0.3"]

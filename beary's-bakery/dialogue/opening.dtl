@@ -17,4 +17,25 @@ update Beary right
 join BunBun left [animation="Instant In" length="0.0" wait="true"]
 BunBun: That’s a strange request…but okay!
 [wait time="1.0"]
+Beary: Great! Let me introduce you to my staff!
+leave --All-- [animation="Instant Out" wait="true"]
+join Hammy center [animation="Bounce In" wait="true"]
+Beary: This is our manager, Hammy.
+[wait time="1.0"]
+leave Hammy [animation="Instant Out"]
+join Dexter center [animation="Bounce In" wait="true"]
+Beary: This the janitor, Dexter.
+[wait time="1.0"]
+leave Dexter [animation="Instant Out"]
+join James left [animation="Bounce In"]
+join Jeorge right [animation="Bounce In" wait="true"]
+Beary: These are the assistant bakers James and Jeorge. Jeorge is the one with heterochromia.
+[wait time="1.0"]
+leave --All-- [animation="Instant Out"]
+join BunBun left [animation="Instant In"]
+join Beary right [animation="Bounce In" wait="true"]
+Beary: And I'm Beary! Welcome to the bakery.
+BunBun: When should I begin?
+Beary: Hmm... how about tomorrow?
+BunBun: Sounds great!
 [end_timeline]

@@ -20,7 +20,7 @@
 "image": "\"res://Assets/dexterfront.png\""
 },
 "mirror": false,
-"offset": Vector2(45, 60),
+"offset": Vector2(0, 60),
 "scale": 0.98,
 "scene": ""
 }

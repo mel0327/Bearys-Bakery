@@ -3,18 +3,23 @@
 join Beary right [animation="Slide In Right"]
 join BunBun left [animation="Slide In Left" wait="true"]
 update Beary [animation="Tada" repeat="2"]
-Beary: I forgot to mention, I used to be captain of the marine corps.
+BunBun:Why are you doing all of this?!?
+Beary:Hahahhaha
+Beary:Those idiotic creatures said my cakes tasted like trash!
+Beary:I only killed one at first... and I put them in my cakes!
 [wait time="1.0" hide_text="false"]
-BunBun: Why did you switch up?
+Beary:They tasted delicious... 
 [wait time="1.0" hide_text="false"]
-Beary: Because...
-Beary: ...
+BunBun:Wha-
 [wait time="0.3" hide_text="false"]
-Beary: I heard some of you talking bad about my pastries.
+BunBun:You killed all of those animals...
+BunBun:BECAUSE SOMEONE SAID IT TASTED BAD!??!?!
 [wait time="1.0"]
 # bunbun shoots beary, bang sfx
 update Beary rightmost [animation="Tada" wait="true" repeat="2" move_time="0.7"]
 BunBun: You should never kill anyone over a small comment.
 Beary: I don’t regret my actions.
-# beary dies, the end
+[wait time="3.0" hide_text="true"]
+BunBun reported what happened to the police. The citizens of Vanilla City were disgusted by Beary's actions.
+BunBun was given an award for their heroic deeds and lived as Vanilla City's hero.
 [end_timeline]
