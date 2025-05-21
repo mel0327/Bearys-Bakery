@@ -50,6 +50,6 @@ leave --All-- [animation="Fade Out" length="1.0"]
 [wait time="1.0"]
 [background arg="res://Assets/Black_BG_1-01.webp" fade="1.0"]
 [wait time="1.5"]
-As BunBun heads out they, hear a loud crash behind the dumpster and sees a black figure carrying a bag about their size.
+As BunBun heads out, they hear a loud crash behind the dumpster and sees a black figure carrying a bag about their size.
 This was enough evidence for BunBun to start investigating.
 [end_timeline]

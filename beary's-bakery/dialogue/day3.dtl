@@ -32,14 +32,14 @@ update BunBun leftmost [animation="Bounce" length="0.2" wait="true" move_time="0
 James: Who allowed you to come in.
 BunBun: What's going on here?!
 BunBun points their gun at James
-James: None of your buisness.
+James: None of your business.
 BunBun:Why are you kidnapping residents?
 Jeorge:I want to hear your theory.
 James:Don’t entertain them, Jeorge.
 Jeorge:You’re no fun.
 Jeorge:Fine, let's do this quickly.
 Jeorge: Get out before things get messy.
-BunBun doesn’t move. James and Jeorge charge at BunBun.
+James and Jeorge charge at BunBun.
 update Jeorge center [animation="Shake X" length="0.6" move_time="0.3"]
 update James left [animation="Shake X" length="0.4" move_time="0.3"]
 [wait time="1.5"]

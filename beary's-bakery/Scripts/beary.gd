@@ -1,6 +1,6 @@
 class_name Beary extends Mob
 
-@onready var play_dialogue = preload("res://Scenes/day3_end.tscn")
+@onready var play_dialogue = preload("res://Scenes/bossbattle_end.tscn")
 var player_reference: Player
 
 

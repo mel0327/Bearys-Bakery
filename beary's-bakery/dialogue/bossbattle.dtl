@@ -6,7 +6,7 @@ They find dead bodies and jars filled with blood in the cabinets and fridges.
 When BunBun was fighting the twins, they noticed they were protecting a suspicious door.
 There is a secret door behind one of the fridges.
 [wait time="1.0"]
-# moving fridge/door creek sfx
+# moving fridge/door creak sfx
 [background arg="res://Assets/bossscene.png" fade="1.0" transition="Push Left"]
 [wait time="1.0"]
 join Beary right [animation="Zoom Center In" wait="true" z_index="-1"]
