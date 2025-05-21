@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu01kdas7pjc8"]
+
+[ext_resource type="Script" path="res://Scripts/interact_3.gd" id="1_87qgt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s4o5v"]
+radius = 152.03
+
+[node name="Interact" type="Area2D"]
+script = ExtResource("1_87qgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s4o5v")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -115.0
+offset_top = -110.0
+offset_right = 1638.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Press 'e' to interact"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

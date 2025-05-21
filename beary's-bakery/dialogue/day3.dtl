@@ -2,6 +2,12 @@
 The next day when BunBun walked into Beary’s Bakery, Hammy’s body was gone. BunBun continued work like nothing happened until the end of their shift.
 join BunBun center [animation="Slide In Left" length="1.5" wait="true"]
 BunBun decides to break into the kitchen.
+label redo code
+[text_input text="Enter the 4-digit code" var="response"]
+if {response} != "1234":
+	BunBun: That's wrong...
+	jump redo code
+BunBun: Got it!
 [background arg="res://Assets/onote.png" fade="0.5" transition="Swipe Left To Right"]
 join James right [z_index="-1"]
 join Jeorge rightmost [z_index="-1"]

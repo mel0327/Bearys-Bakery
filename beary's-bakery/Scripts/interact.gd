@@ -1,7 +1,7 @@
 class_name Interact extends Area2D
 
 
-@onready var play_dialogue = preload("res://Scenes/dialogue_2.tscn")
+@onready var play_dialogue = preload("res://Scenes/opening.tscn")
 @onready var label: Label = $Label
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -14,7 +14,7 @@ func _ready() -> void:
 	sprite.visible = true
 
 
-func _unhandled_input(event: InputEvent):
+func _unhandled_input(_event: InputEvent):
 	if not is_player_near:
 		return
 	
@@ -38,6 +38,7 @@ func _on_dialogue_finished():
 	if player_reference:
 		player_reference.get_node("AnimatedSprite2D").visible = true
 		player_reference.resume_movement()
+
 
 
 

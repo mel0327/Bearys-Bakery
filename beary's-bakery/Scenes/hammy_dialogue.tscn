@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://lcki4catmamt"]
-
-[ext_resource type="Script" path="res://Scripts/hammy_dialogue.gd" id="1_nbn5n"]
-
-[node name="hammy_dialogue" type="Node2D"]
-script = ExtResource("1_nbn5n")
