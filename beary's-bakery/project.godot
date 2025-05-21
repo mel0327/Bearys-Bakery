@@ -33,15 +33,16 @@ directories/dch_directory={
 "Townsfolk2": "res://dialogue/Townsfolk2.dch",
 "Townsfolk3": "res://dialogue/Townsfolk3.dch",
 "Townsfolk4": "res://dialogue/Townsfolk4.dch",
-"Townsfolk5": "res://dialogue/Townsfolk5.dch"
+"Townsfolk5": "res://dialogue/Townsfolk5.dch",
+"dialogue/Beary": "res://dialogue/Beary.dch"
 }
 directories/dtl_directory={
 "bossbattle": "res://dialogue/bossbattle.dtl",
+"bossbattle_end": "res://dialogue/bossbattle_end.dtl",
 "day1": "res://dialogue/day1.dtl",
 "day2": "res://dialogue/day2.dtl",
 "day2_end": "res://dialogue/day2_end.dtl",
 "day3": "res://dialogue/day3.dtl",
-"dialogue/bossbattle_end": "res://dialogue/bossbattle_end.dtl",
 "opening": "res://dialogue/opening.dtl"
 }
 layout/style_list=["res://dialogue/npc_style.tres", "res://dialogue/bunbun_style.tres", "res://dialogue/hammy_style.tres", "res://dialogue/dexter_style.tres", "res://dialogue/james_style.tres", "res://dialogue/jeorge_style.tres", "res://dialogue/beary_style.tres"]
@@ -143,3 +144,8 @@ esc={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
