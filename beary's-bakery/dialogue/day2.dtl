@@ -41,7 +41,7 @@ leave --All-- [animation="Instant Out"]
 [background arg="res://Assets/Black_BG_1-01.webp" fade="2.0" transition="Push Down"]
 [wait time="1.5"]
 Night time
-[background fade="2.0" transition="Simple Fade"]
+[background arg="res://Assets/cafe.png" fade="2.0" transition="Simple Fade"]
 [wait time="1.0"]
 join BunBun center [animation="Slide In Up"]
 BunBun is outside the bakery, but everything is locked.

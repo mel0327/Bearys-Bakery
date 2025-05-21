@@ -1,6 +1,6 @@
 extends Area2D
 
-
+@onready var opening = preload("res://Scenes/opening.tscn")
 @onready var day_1 = preload("res://Scenes/day1.tscn")
 @onready var day_2 = preload("res://Scenes/day2.tscn")
 @onready var label: Label = $Label
@@ -22,8 +22,10 @@ func _unhandled_input(_event: InputEvent):
 		var dialogue_instance
 		match day:
 			0:
-				dialogue_instance = day_1.instantiate()
+				dialogue_instance = opening.instantiate()
 			1:
+				dialogue_instance = day_1.instantiate()
+			2:
 				dialogue_instance = day_2.instantiate()
 		
 		
@@ -44,9 +46,8 @@ func _on_dialogue_finished():
 		player_reference.get_node("AnimatedSprite2D").visible = true
 		player_reference.resume_movement()
 	day += 1
-	if day > 1:
-		#switch into hammy fight tscn, then go back into bakery & interact for day 3
-		#after interact for day3, switch to james&jeorge fight
+	if day > 2:
+		get_tree().change_scene_to_file("res://Scenes/pantry.tscn")
 		return
 	set_deferred("monitoring", true)
 

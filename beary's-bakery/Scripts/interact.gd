@@ -1,9 +1,8 @@
-class_name Interact extends Area2D
+extends Area2D
 
 
-@onready var play_dialogue = preload("res://Scenes/opening.tscn")
+@onready var play_dialogue = preload("res://Scenes/day3_end.tscn")
 @onready var label: Label = $Label
-@onready var sprite: Sprite2D = $Sprite2D
 
 var is_player_near := false
 var player_reference
@@ -11,7 +10,6 @@ var player_reference
 
 func _ready() -> void:
 	label.visible = false
-	sprite.visible = true
 
 
 func _unhandled_input(_event: InputEvent):
@@ -30,8 +28,8 @@ func _unhandled_input(_event: InputEvent):
 			player_reference.get_node("AnimatedSprite2D").visible = false
 			player_reference.pause_movement()
 
+		get_tree().change_scene_to_file("res://Scenes/basement.tscn")
 		set_deferred("monitoring", false)
-		sprite.visible = false
 
 
 func _on_dialogue_finished():

@@ -28,6 +28,7 @@ func _unhandled_input(_event: InputEvent):
 			player_reference.get_node("AnimatedSprite2D").visible = false
 			player_reference.pause_movement()
 
+		get_tree().change_scene_to_file("res://Scenes/kitchen.tscn")
 		set_deferred("monitoring", false)
 
 

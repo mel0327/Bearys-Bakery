@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn1t2yt4i62c3"]
+[gd_scene load_steps=12 format=3 uid="uid://c8hgitltlrrlw"]
 
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://5upehuibccer" path="res://Sounds/747941__viramiller__intense-music-for-suspenseful-scenes.mp3" id="5_q3llf"]
 [ext_resource type="PackedScene" uid="uid://8kprld2q6fj4" path="res://Scenes/pickupspeed.tscn" id="6_kdh6y"]
 [ext_resource type="PackedScene" uid="uid://dmuhxvssra8nw" path="res://Scenes/pickuphealth.tscn" id="7_uophr"]
+[ext_resource type="PackedScene" uid="uid://cu01kdas7pjc8" path="res://Scenes/interact_3.tscn" id="8_ffl4b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsiey"]
 size = Vector2(41.7068, 1179.08)
@@ -90,5 +91,8 @@ position = Vector2(168, 448)
 
 [node name="PickupHealth2" parent="." instance=ExtResource("7_uophr")]
 position = Vector2(577, 575)
+
+[node name="Interact" parent="." instance=ExtResource("8_ffl4b")]
+position = Vector2(1046, 403)
 
 [connection signal="body_entered" from="cake" to="." method="_on_cake_body_entered"]

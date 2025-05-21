@@ -10,9 +10,10 @@
 
 [node name="Player" parent="." instance=ExtResource("1_3eobl")]
 position = Vector2(296, 305)
+collision_mask = 1
 
 [node name="Interact" parent="." instance=ExtResource("3_sqejq")]
-position = Vector2(970, 557)
+position = Vector2(34, 317)
 
 [node name="Hammy" parent="." instance=ExtResource("2_3nlxo")]
 position = Vector2(795, 88)
