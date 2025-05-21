@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8hgitltlrrlw"]
+[gd_scene load_steps=12 format=3 uid="uid://dn1t2yt4i62c3"]
 
 [ext_resource type="Script" path="res://Scenes/pantry.gd" id="1_0hpdc"]
 [ext_resource type="Texture2D" uid="uid://dqgdubj206222" path="res://Assets/pantryyeslight.png" id="1_vcdcm"]

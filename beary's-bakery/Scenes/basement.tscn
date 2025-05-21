@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwkxfmcf3jgoy"]
+[gd_scene load_steps=13 format=3 uid="uid://cmny10w18bgjm"]
 
 [ext_resource type="Script" path="res://Scenes/basement.gd" id="1_sxnyi"]
 [ext_resource type="Texture2D" uid="uid://ddrqgr6qt04du" path="res://Assets/bossscene.png" id="1_x3oau"]

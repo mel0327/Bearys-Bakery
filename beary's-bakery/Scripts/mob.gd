@@ -94,7 +94,10 @@ func update_animation() -> void:
 		return
 		
 	if velocity.length() < 5:
-		animated_sprite.stop()
+		if animated_sprite.animation != "idle":
+				animated_sprite.play("idle")
+		else:
+			animated_sprite.stop()
 		return
 		
 	if abs(velocity.x) > abs(velocity.y):

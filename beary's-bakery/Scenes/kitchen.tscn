@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://csv3wejgy3juh"]
+[gd_scene load_steps=18 format=3 uid="uid://inmtk547o24v"]
 
 [ext_resource type="Script" path="res://Scenes/kitchen.gd" id="1_2b2xi"]
 [ext_resource type="Texture2D" uid="uid://b7gj42wgme8vi" path="res://Assets/kitchenroom.png" id="1_npwco"]
