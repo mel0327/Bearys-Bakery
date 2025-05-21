@@ -1,13 +1,32 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4ts4onycaw2m"]
+[gd_scene load_steps=26 format=3 uid="uid://b4ts4onycaw2m"]
 
 [ext_resource type="Texture2D" uid="uid://dpgvql0gesu0f" path="res://Assets/cafedraft2.png" id="1_iuncx"]
 [ext_resource type="Script" path="res://Scenes/bakery.gd" id="1_rrgob"]
 [ext_resource type="Texture2D" uid="uid://cgnjiwgwneb5l" path="res://Assets/counterfull.png" id="2_kgak0"]
 [ext_resource type="Texture2D" uid="uid://cb81bppai50pj" path="res://Assets/table.png" id="3_onqwd"]
 [ext_resource type="Script" path="res://Scenes/scene_transition.gd" id="4_qnslb"]
+[ext_resource type="Texture2D" uid="uid://dy6qupi0auvef" path="res://Assets/npcgreycatwbluetiefront.png" id="5_7bept"]
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="5_q4vdf"]
+[ext_resource type="Texture2D" uid="uid://dqh7s4s7seqkx" path="res://Assets/npcgreyratcropped.png" id="6_6eu8f"]
 [ext_resource type="AudioStream" uid="uid://df0jqdx2c8lt" path="res://Sounds/521785__tkky__110-cute-keys.wav" id="7_7owxx"]
 [ext_resource type="PackedScene" uid="uid://btiq01ha34f8c" path="res://Scenes/interact_2.tscn" id="9_a5fp7"]
+[ext_resource type="Texture2D" uid="uid://indon5blrb4a" path="res://Assets/npcgraycatsuitfront.png" id="9_a1544"]
+[ext_resource type="Texture2D" uid="uid://hk272ml22xff" path="res://Assets/npcwhiteratcropped.png" id="10_n4nev"]
+[ext_resource type="Texture2D" uid="uid://bm0kvwn6a1xwo" path="res://Assets/strwbrycake.png" id="13_q5ju6"]
+[ext_resource type="Texture2D" uid="uid://ceolak3g5fiud" path="res://Assets/redcake.png" id="14_k3yvr"]
+[ext_resource type="Texture2D" uid="uid://cayyv3pexx6s3" path="res://Assets/bunbunspritesheet.png" id="15_skgtd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tarq5"]
+radius = 21.5385
+height = 93.8666
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_der5n"]
+radius = 28.0
+height = 94.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csgn6"]
+radius = 22.0
+height = 78.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1pv2"]
 size = Vector2(333.386, 65.2941)
@@ -38,6 +57,79 @@ script = ExtResource("1_rrgob")
 position = Vector2(575, 329.25)
 scale = Vector2(2.3, 1.74267)
 texture = ExtResource("1_iuncx")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(253, 351)
+scale = Vector2(0.928571, 0.9375)
+texture = ExtResource("9_a1544")
+region_enabled = true
+region_rect = Rect2(9, 5.75, 92.5, 120.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(239, 344)
+scale = Vector2(0.928571, 0.9375)
+shape = SubResource("CapsuleShape2D_tarq5")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(237, 511)
+texture = ExtResource("10_n4nev")
+region_enabled = true
+region_rect = Rect2(0, 0, 92.5, 127.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(241, 503)
+shape = SubResource("CapsuleShape2D_der5n")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(904, 339)
+texture = ExtResource("5_7bept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(902, 331)
+shape = SubResource("CapsuleShape2D_csgn6")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
+position = Vector2(589, 502)
+scale = Vector2(0.965909, 0.920168)
+texture = ExtResource("6_6eu8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(588, 497)
+shape = SubResource("CapsuleShape2D_csgn6")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9"]
+position = Vector2(576, 354)
+texture = ExtResource("10_n4nev")
+region_enabled = true
+region_rect = Rect2(0, 0, 92.5, 127.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+position = Vector2(580, 341)
+shape = SubResource("CapsuleShape2D_der5n")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D10"]
+position = Vector2(917, 507)
+scale = Vector2(0.928571, 0.9375)
+texture = ExtResource("9_a1544")
+region_enabled = true
+region_rect = Rect2(9, 5.75, 92.5, 120.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
+position = Vector2(902, 495)
+scale = Vector2(0.928571, 0.9375)
+shape = SubResource("CapsuleShape2D_tarq5")
 
 [node name="Counter" type="StaticBody2D" parent="."]
 position = Vector2(719, 237)
@@ -166,5 +258,37 @@ autostart = true
 
 [node name="Interact2" parent="." instance=ExtResource("9_a5fp7")]
 position = Vector2(592, 200)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(240, 365)
+texture = ExtResource("13_q5ju6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(243, 520)
+texture = ExtResource("14_k3yvr")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(589, 523)
+texture = ExtResource("15_skgtd")
+region_enabled = true
+region_rect = Rect2(365.5, 131.25, 30, 28.9)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(584, 372)
+texture = ExtResource("15_skgtd")
+region_enabled = true
+region_rect = Rect2(430.732, 108.988, 34.08, 26.022)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(902, 364)
+texture = ExtResource("15_skgtd")
+region_enabled = true
+region_rect = Rect2(423, 129.836, 36.886, 31.064)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(908, 520)
+texture = ExtResource("15_skgtd")
+region_enabled = true
+region_rect = Rect2(398.5, 105.088, 32.612, 28.168)
 
 [connection signal="body_entered" from="SceneTransition" to="SceneTransition" method="_on_body_entered"]
