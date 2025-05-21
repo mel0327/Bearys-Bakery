@@ -118,11 +118,11 @@ script = ExtResource("4_jxq5n")
 [node name="Marker2D" type="Marker2D" parent="WeaponPivot"]
 
 [node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_1khfd")]
-position = Vector2(36, 0)
+position = Vector2(50, 0)
 scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" type="Sprite2D" parent="WeaponPivot/Marker2D"]
-position = Vector2(30, 5)
+position = Vector2(65, 5)
 texture = ExtResource("5_qcnbi")
 
 [node name="HealthBar" type="ProgressBar" parent="."]

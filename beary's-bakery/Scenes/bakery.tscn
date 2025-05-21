@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4ts4onycaw2m"]
+[gd_scene load_steps=14 format=3 uid="uid://b4ts4onycaw2m"]
 
 [ext_resource type="Texture2D" uid="uid://dpgvql0gesu0f" path="res://Assets/cafedraft2.png" id="1_iuncx"]
 [ext_resource type="Texture2D" uid="uid://cgnjiwgwneb5l" path="res://Assets/counterfull.png" id="2_kgak0"]
 [ext_resource type="Texture2D" uid="uid://cb81bppai50pj" path="res://Assets/table.png" id="3_onqwd"]
+[ext_resource type="PackedScene" uid="uid://btiq01ha34f8c" path="res://Scenes/interact_2.tscn" id="4_67vja"]
+[ext_resource type="PackedScene" uid="uid://b0rn15jgidqy1" path="res://Scenes/interact.tscn" id="4_pi1cm"]
+[ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="5_lmv5b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1pv2"]
 size = Vector2(333.386, 65.2941)
@@ -145,3 +148,12 @@ shape = SubResource("RectangleShape2D_31t26")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(117, 153.5)
 shape = SubResource("RectangleShape2D_ca021")
+
+[node name="Interact" parent="." instance=ExtResource("4_pi1cm")]
+position = Vector2(406, 671)
+
+[node name="Interact2" parent="." instance=ExtResource("4_67vja")]
+position = Vector2(554, 211)
+
+[node name="Player" parent="." instance=ExtResource("5_lmv5b")]
+position = Vector2(112, 426)

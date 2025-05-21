@@ -45,9 +45,14 @@ func die() -> void:
 
 func pause_movement():
 	can_move = false
+	get_node("AnimatedSprite2D").visible = false
+	print("Player movement paused.")
+
 
 func resume_movement():
 	can_move = true
+	get_node("AnimatedSprite2D").visible = true
+	print("Resuming player movement. can_move is now:", can_move)
 
 func update_animation() -> void:
 	var last_motion = get_last_motion()
