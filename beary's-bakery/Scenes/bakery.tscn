@@ -88,7 +88,7 @@ shape = SubResource("CapsuleShape2D_der5n")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
 position = Vector2(904, 339)
-texture = ExtResource("5_7bept")
+texture = ExtResource("6_6eu8f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
 position = Vector2(902, 331)
@@ -120,9 +120,9 @@ shape = SubResource("CapsuleShape2D_der5n")
 [node name="StaticBody2D10" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D10"]
-position = Vector2(917, 507)
+position = Vector2(920, 506)
 scale = Vector2(0.928571, 0.9375)
-texture = ExtResource("9_a1544")
+texture = ExtResource("5_7bept")
 region_enabled = true
 region_rect = Rect2(9, 5.75, 92.5, 120.5)
 
