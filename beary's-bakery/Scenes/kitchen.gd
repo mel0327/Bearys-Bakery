@@ -15,6 +15,12 @@ func _input(event):
 
 
 func _ready() -> void:
+	var mob_names = ["Jeorge", "James"]
+	for mob_name in mob_names:
+		if Global.dead_mobs.get(mob_name, false):
+			if has_node(mob_name):
+				get_node(mob_name).queue_free()
+
 	var player_scene = preload("res://Scenes/player.tscn")
 	var player = player_scene.instantiate()
 	var spawn_point = $SpawnPoint

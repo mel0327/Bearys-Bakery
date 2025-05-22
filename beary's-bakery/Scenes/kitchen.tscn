@@ -56,12 +56,12 @@ shape = SubResource("RectangleShape2D_7hhah")
 [node name="island" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="island"]
-position = Vector2(584, 327)
+position = Vector2(584, 337)
 scale = Vector2(2.312, 1.728)
 texture = ExtResource("3_x8ien")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="island"]
-position = Vector2(540, 492)
+position = Vector2(539, 499)
 shape = SubResource("RectangleShape2D_i2in3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]

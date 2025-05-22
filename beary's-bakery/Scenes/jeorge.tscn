@@ -131,7 +131,7 @@ unique_name_in_owner = true
 position = Vector2(4, 1.49999)
 scale = Vector2(1.16071, 1.12097)
 sprite_frames = SubResource("SpriteFrames_enufq")
-animation = &"right"
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

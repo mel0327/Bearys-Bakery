@@ -42,6 +42,7 @@ func set_health(new_health: int) -> void:
 		health_bar.visible = false
 
 func die() -> void:
+	Global.dead_mobs[name] = true
 	if _hit_box == null:
 		return
 	set_physics_process(false)

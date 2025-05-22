@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_elax6"]
 script = ExtResource("2_jk6fb")
-healing_amount = 1
+healing_amount = 3
 display_name = ""
 texture = ExtResource("3_cfl06")
 

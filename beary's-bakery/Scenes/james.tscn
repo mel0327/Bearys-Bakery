@@ -128,7 +128,7 @@ unique_name_in_owner = true
 position = Vector2(3, -3)
 scale = Vector2(1.23214, 1.152)
 sprite_frames = SubResource("SpriteFrames_2gn8q")
-animation = &"back"
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_su2o0")
