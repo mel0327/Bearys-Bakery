@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://u38ug5ggjb46"]
+[gd_scene load_steps=24 format=3 uid="uid://u38ug5ggjb46"]
 
 [ext_resource type="Script" path="res://Scripts/jeorge.gd" id="1_quuhn"]
 [ext_resource type="Texture2D" uid="uid://bcejh37fsl4kh" path="res://Assets/jerogespritesheetupdated copy.png" id="2_5e34v"]
-[ext_resource type="Texture2D" uid="uid://cjx0fgf4fyh0t" path="res://Assets/jerogespritesheet.png" id="2_cd4bm"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_p0vjp"]
 [ext_resource type="Texture2D" uid="uid://cud6we6n0v4fb" path="res://Assets/jerogespritesheetupdated copy 2.png" id="4_gdv2p"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_ysi8j"]
@@ -14,10 +13,6 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_6v6qq"]
 atlas = ExtResource("2_5e34v")
 region = Rect2(0, 0, 119, 127)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yr8td"]
-atlas = ExtResource("2_cd4bm")
-region = Rect2(112, 0, 112, 124)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixsav"]
 atlas = ExtResource("4_gdv2p")
@@ -46,9 +41,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yr8td")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ixsav")
 }],
@@ -139,7 +131,7 @@ unique_name_in_owner = true
 position = Vector2(4, 1.49999)
 scale = Vector2(1.16071, 1.12097)
 sprite_frames = SubResource("SpriteFrames_enufq")
-animation = &"idle"
+animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

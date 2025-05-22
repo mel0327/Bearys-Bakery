@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var music = $AudioStreamPlayer
-var fade_duration := 1.5
+var fade_duration := 0.5
 
 func _ready() -> void:
 	music.volume_db = 0
@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _on_restart_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/bakery.tscn")
+	get_tree().reload_current_scene()
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4m46wxwdv6o" path="res://Assets/hammyspritesheetupdated.png" id="2_rcl5s"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
-[ext_resource type="AudioStream" uid="uid://br3bfo8mgrcod" path="res://Sounds/118792__lmbubec__1_knife_slash_a.wav" id="5_y7fy4"]
+[ext_resource type="AudioStream" uid="uid://c8ntrgm8pv582" path="res://Sounds/760563__noisyredfox__hitsound2.ogg" id="6_mqiyt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qek4r"]
 atlas = ExtResource("2_rcl5s")
@@ -78,7 +78,7 @@ height = 139.0
 radius = 399.061
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tu8y"]
-radius = 33.0
+radius = 42.0
 height = 144.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8fsst"]
@@ -117,7 +117,7 @@ corner_radius_bottom_left = 4
 playback_mode = 1
 random_volume_offset_db = 6.0
 streams_count = 1
-stream_0/stream = ExtResource("5_y7fy4")
+stream_0/stream = ExtResource("6_mqiyt")
 
 [node name="Hammy" type="CharacterBody2D"]
 motion_mode = 1
