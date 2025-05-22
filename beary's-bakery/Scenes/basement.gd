@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var music = $AudioStreamPlayer
 @onready var loop_timer = $LoopTimer
+@onready var ending_screen_scene = preload("res://Scenes/ending_screen.tscn")
+var ending_screen_shown := false
 var fade_duration := 1.5
 
 
@@ -45,3 +47,10 @@ func exit_tree():
 
 func _on_loop_timer_timeout():
 	music.play()
+
+func show_ending_screen():
+	if not ending_screen_shown:
+		ending_screen_shown = true
+		var ending_screen = ending_screen_scene.instantiate()
+		add_child(ending_screen)
+		Global.allow_pause_menu = false
