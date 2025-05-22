@@ -2,7 +2,8 @@ class_name Mob extends CharacterBody2D
 
 @export var max_speed := 400.0
 @export var acceleration := 700.0
-@export var health := 100: set = set_health
+@export var max_health := 100
+var health: int
 @export var damage := 1 
 
 var _player: Player = null
@@ -16,32 +17,32 @@ var _player: Player = null
 @onready var _attack_sound: AudioStreamPlayer = %AttackSound
 
 func _ready() -> void:
-	health_bar.visible = false
+	initialize()
 	_detection_area.body_entered.connect(_on_detection_area_body_entered)
 	_detection_area.body_exited.connect(_on_detection_area_body_exited)
 	_hit_box.body_entered.connect(_on_hit_box_body_entered)
 	
-
+	
+func initialize() -> void:
+	health = max_health
+	health_bar.max_value = max_health
+	health_bar.value = health
+	health_bar.visible = false
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
-	health = new_health
+	health = clamp(new_health, 0, max_health)
 	health_bar.value = health
-	
+
 	if health < previous_health:
 		health_bar.visible = true
-		
+		_hurt_sound.play()
+
 	if health <= 0:
 		die()
-		
-	elif health < previous_health:
-		health_bar.visible = true
-		_hurt_sound.play()
-		
-	if health == 100:
-		health_bar.visible = false
 
 func die() -> void:
+	Global.dead_mobs[name] = true
 	if _hit_box == null:
 		return
 	set_physics_process(false)
@@ -94,7 +95,10 @@ func update_animation() -> void:
 		return
 		
 	if velocity.length() < 5:
-		animated_sprite.stop()
+		if animated_sprite.animation != "idle":
+				animated_sprite.play("idle")
+		else:
+			animated_sprite.stop()
 		return
 		
 	if abs(velocity.x) > abs(velocity.y):

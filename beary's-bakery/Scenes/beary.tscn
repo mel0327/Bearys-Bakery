@@ -1,40 +1,38 @@
-[gd_scene load_steps=21 format=3 uid="uid://q0in37xtjbdw"]
+[gd_scene load_steps=22 format=3 uid="uid://q0in37xtjbdw"]
 
 [ext_resource type="Script" path="res://Scripts/beary.gd" id="1_1pxqb"]
+[ext_resource type="Texture2D" uid="uid://dw3junh21kydc" path="res://Assets/bearyspritesheetupdate (1).png" id="2_1s2rq"]
 [ext_resource type="Texture2D" uid="uid://t6chb8sl86wn" path="res://Assets/bearyspritesheet.png" id="2_q5b07"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_gl4eq"]
+[ext_resource type="Texture2D" uid="uid://is0j6ch4v7wj" path="res://Assets/bearyspritesheetupdate.png" id="4_4t0vx"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_m04pg"]
-[ext_resource type="AudioStream" uid="uid://br3bfo8mgrcod" path="res://Sounds/118792__lmbubec__1_knife_slash_a.wav" id="5_shst1"]
+[ext_resource type="AudioStream" uid="uid://djpryrnwxj4mm" path="res://Sounds/chainsaw-1-228354.mp3" id="7_ujuh4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1iyjy"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(112, 128, 112, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln2b8"]
+atlas = ExtResource("2_1s2rq")
+region = Rect2(135, 124, 94, 129)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_emrws"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(112, 0, 112, 124)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oyhv0"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(112, 0, 112, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjrs7"]
+atlas = ExtResource("4_4t0vx")
+region = Rect2(0, 0, 107, 125)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0r77y"]
 atlas = ExtResource("2_q5b07")
 region = Rect2(112, 0, 112, 124)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3uxmo"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(0, 124, 112, 124)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jio8j"]
+atlas = ExtResource("2_1s2rq")
+region = Rect2(0, 384, 108, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1xg7r"]
-atlas = ExtResource("2_q5b07")
-region = Rect2(0, 0, 112, 124)
+[sub_resource type="AtlasTexture" id="AtlasTexture_edxc6"]
+atlas = ExtResource("2_1s2rq")
+region = Rect2(131, 384, 96, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_30dr5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1iyjy")
+"texture": SubResource("AtlasTexture_ln2b8")
 }],
 "loop": true,
 "name": &"back",
@@ -42,16 +40,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emrws")
+"texture": SubResource("AtlasTexture_rjrs7")
 }],
 "loop": true,
 "name": &"front",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oyhv0")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0r77y")
 }],
@@ -61,7 +56,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3uxmo")
+"texture": SubResource("AtlasTexture_jio8j")
 }],
 "loop": true,
 "name": &"left",
@@ -69,7 +64,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1xg7r")
+"texture": SubResource("AtlasTexture_edxc6")
 }],
 "loop": true,
 "name": &"right",
@@ -84,8 +79,8 @@ height = 104.0
 radius = 267.899
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7pkkf"]
-radius = 31.0
-height = 104.0
+radius = 52.0
+height = 134.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xegxk"]
 playback_mode = 1
@@ -123,7 +118,7 @@ corner_radius_bottom_left = 4
 playback_mode = 1
 random_volume_offset_db = 6.0
 streams_count = 1
-stream_0/stream = ExtResource("5_shst1")
+stream_0/stream = ExtResource("7_ujuh4")
 
 [node name="Beary" type="CharacterBody2D"]
 motion_mode = 1
@@ -131,7 +126,7 @@ script = ExtResource("1_1pxqb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(4, -11)
+position = Vector2(5.99999, -12)
 scale = Vector2(1.28571, 1.19355)
 sprite_frames = SubResource("SpriteFrames_30dr5")
 animation = &"front"
@@ -150,6 +145,7 @@ shape = SubResource("CircleShape2D_363vh")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(4, -6)
 shape = SubResource("CapsuleShape2D_7pkkf")
 
 [node name="HurtSound" type="AudioStreamPlayer" parent="."]
@@ -176,7 +172,6 @@ show_percentage = false
 [node name="AttackSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_ub8oh")
-volume_db = 10.0
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3hmc7aoapar2"]
+[gd_scene load_steps=5 format=3 uid="uid://c3hmc7aoapar2"]
 
 [ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_gr6fk"]
 [ext_resource type="Texture2D" uid="uid://bm0kvwn6a1xwo" path="res://Assets/strwbrycake.png" id="2_1kynl"]
+[ext_resource type="AudioStream" uid="uid://iejaiqays04n" path="res://Sounds/376819__original_sound__1-impact-wet.wav" id="3_832mt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lupxo"]
 
@@ -15,5 +16,10 @@ texture = ExtResource("2_1kynl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lupxo")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_832mt")
+volume_db = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

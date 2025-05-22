@@ -53,7 +53,7 @@ size_flags_vertical = 3
 theme = ExtResource("3_m0vmb")
 theme_override_fonts/font = ExtResource("4_1hbn1")
 theme_override_font_sizes/font_size = 30
-text = "Options"
+text = "Controls"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

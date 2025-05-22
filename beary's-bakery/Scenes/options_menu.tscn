@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmn230kak7r3m"]
+[gd_scene load_steps=9 format=3 uid="uid://cmn230kak7r3m"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_4jwhc"]
 [ext_resource type="FontFile" uid="uid://b4vlhabd0nxij" path="res://Assets/CHERI___.TTF" id="2_q0hqo"]
+[ext_resource type="Texture2D" uid="uid://cywc8q3tp2p0x" path="res://Assets/inputmap.png" id="3_218yb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyixk"]
 bg_color = Color(0.976471, 0.788235, 0.913725, 1)
@@ -16,6 +17,7 @@ bg_color = Color(1, 0.738832, 0.917378, 1)
 bg_color = Color(0.976471, 0.788235, 0.913725, 1)
 
 [sub_resource type="Theme" id="Theme_sposj"]
+Button/fonts/font = ExtResource("2_q0hqo")
 Button/styles/focus = SubResource("StyleBoxFlat_wyixk")
 Button/styles/hover = SubResource("StyleBoxFlat_c5adu")
 Button/styles/normal = SubResource("StyleBoxFlat_q8wva")
@@ -37,7 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.941176, 0.623529, 0.839216, 1)
+color = Color(0.971901, 0.833517, 0.922334, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -59,7 +61,7 @@ theme_override_constants/separation = -48
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_q0hqo")
 theme_override_font_sizes/font_size = 32
-text = "Options"
+text = "Controls"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -69,3 +71,8 @@ size_flags_vertical = 10
 theme = SubResource("Theme_sposj")
 theme_override_fonts/font = ExtResource("2_q0hqo")
 text = "Exit"
+
+[node name="Inputmap" type="Sprite2D" parent="."]
+position = Vector2(579, 329)
+scale = Vector2(1.586, 1.496)
+texture = ExtResource("3_218yb")

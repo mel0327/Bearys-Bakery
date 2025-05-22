@@ -1,32 +1,37 @@
-[gd_scene load_steps=19 format=3 uid="uid://bxu755suyt7ne"]
+[gd_scene load_steps=21 format=3 uid="uid://bxu755suyt7ne"]
 
 [ext_resource type="Script" path="res://Scripts/hammy.gd" id="1_l3e5u"]
 [ext_resource type="Texture2D" uid="uid://bi838oti1ig8r" path="res://Assets/hammyspritesheet.png" id="2_817nc"]
+[ext_resource type="Texture2D" uid="uid://c4m46wxwdv6o" path="res://Assets/hammyspritesheetupdated.png" id="2_rcl5s"]
 [ext_resource type="AudioStream" uid="uid://d2y2qefiof128" path="res://Sounds/350919__cabled_mess__hurt_c_05.wav" id="3_805yl"]
 [ext_resource type="AudioStream" uid="uid://bkr404qkw2tv6" path="res://Sounds/168567__psychentist__ratdeath.mp3" id="4_8u0u3"]
-[ext_resource type="AudioStream" uid="uid://br3bfo8mgrcod" path="res://Sounds/118792__lmbubec__1_knife_slash_a.wav" id="5_y7fy4"]
+[ext_resource type="AudioStream" uid="uid://c8ntrgm8pv582" path="res://Sounds/760563__noisyredfox__hitsound2.ogg" id="6_mqiyt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pylve"]
-atlas = ExtResource("2_817nc")
-region = Rect2(112, 128, 112, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek4r"]
+atlas = ExtResource("2_rcl5s")
+region = Rect2(108, 128, 108, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x41g4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr0bs"]
+atlas = ExtResource("2_rcl5s")
+region = Rect2(108, 0, 108, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2t51"]
 atlas = ExtResource("2_817nc")
 region = Rect2(112, 0, 112, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nlqk7"]
-atlas = ExtResource("2_817nc")
-region = Rect2(0, 128, 112, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8j53"]
+atlas = ExtResource("2_rcl5s")
+region = Rect2(0, 128, 108, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_08lx4"]
-atlas = ExtResource("2_817nc")
-region = Rect2(0, 0, 112, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu4vf"]
+atlas = ExtResource("2_rcl5s")
+region = Rect2(0, 0, 108, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o4hix"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pylve")
+"texture": SubResource("AtlasTexture_qek4r")
 }],
 "loop": true,
 "name": &"back",
@@ -34,7 +39,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x41g4")
+"texture": SubResource("AtlasTexture_vr0bs")
 }],
 "loop": true,
 "name": &"front",
@@ -42,7 +47,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nlqk7")
+"texture": SubResource("AtlasTexture_n2t51")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8j53")
 }],
 "loop": true,
 "name": &"left",
@@ -50,7 +63,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_08lx4")
+"texture": SubResource("AtlasTexture_xu4vf")
 }],
 "loop": true,
 "name": &"right",
@@ -65,7 +78,7 @@ height = 139.0
 radius = 399.061
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tu8y"]
-radius = 33.0
+radius = 42.0
 height = 144.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8fsst"]
@@ -104,7 +117,7 @@ corner_radius_bottom_left = 4
 playback_mode = 1
 random_volume_offset_db = 6.0
 streams_count = 1
-stream_0/stream = ExtResource("5_y7fy4")
+stream_0/stream = ExtResource("6_mqiyt")
 
 [node name="Hammy" type="CharacterBody2D"]
 motion_mode = 1
@@ -115,7 +128,7 @@ unique_name_in_owner = true
 position = Vector2(2.5, -3)
 scale = Vector2(1.15179, 1.10937)
 sprite_frames = SubResource("SpriteFrames_o4hix")
-animation = &"front"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

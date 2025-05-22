@@ -6,7 +6,8 @@ var player_reference: Player
 
 
 func _ready() -> void:
-	health = 100.0
+	max_health = 50
+	initialize()
 	max_speed = 400.0
 	damage = 5
 	name = "Hammy"

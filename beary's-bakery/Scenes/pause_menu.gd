@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 
+
 func _ready() -> void:
 	hide()
 	set_process_input(true)
@@ -22,7 +23,9 @@ func _on_resume_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
+	hide()
 	get_tree().paused = false
+	Global.dead_mobs.clear()
 	get_tree().reload_current_scene()
 
 
