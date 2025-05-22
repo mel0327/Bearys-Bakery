@@ -16,6 +16,8 @@ var _player: Player = null
 @onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var _attack_sound: AudioStreamPlayer = %AttackSound
 
+signal mob_died
+
 func _ready() -> void:
 	initialize()
 	_detection_area.body_entered.connect(_on_detection_area_body_entered)
@@ -52,6 +54,7 @@ func die() -> void:
 
 	_die_sound.play()
 	_die_sound.finished.connect(queue_free)
+	emit_signal("mob_died")
 
 func _physics_process(delta: float) -> void:
 	if _player == null:

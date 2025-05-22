@@ -5,6 +5,7 @@ class_name Hammy extends Mob
 var player_reference: Player
 
 
+
 func _ready() -> void:
 	max_health = 50
 	initialize()
@@ -35,7 +36,10 @@ func die():
 
 	_die_sound.play()
 	_die_sound.finished.connect(queue_free)
+	emit_signal("mob_died")
 	handle_dialogue()
+	
+
 
 
 func handle_dialogue():

@@ -16,7 +16,6 @@ func _on_timeline_ended() -> void:
 
 
 func end_dialogue():
-	print("ending_dialog")
 	for connection in dialogue_finished.get_connections():
 		print(connection)
 	emit_signal("dialogue_finished")

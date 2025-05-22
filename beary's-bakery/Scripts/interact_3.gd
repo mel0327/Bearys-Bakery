@@ -6,10 +6,14 @@ extends Area2D
 
 var is_player_near := false
 var player_reference
+var mob_reference: Mob
 
 
 func _ready() -> void:
 	label.visible = false
+	mob_reference = get_parent().get_node("Hammy")
+	if mob_reference:
+		mob_reference.connect("mob_died", Callable(self, "_on_mob_died"))
 
 
 func _unhandled_input(_event: InputEvent):
@@ -43,11 +47,13 @@ func _on_dialogue_finished():
 func _on_body_entered(body: Player) -> void:
 	if body.name == "Player":
 		is_player_near = true
-		label.visible = true
 		player_reference = body
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		is_player_near = false
-		label.visible = false
+
+
+func _on_mob_died():
+	label.visible = true

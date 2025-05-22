@@ -93,6 +93,6 @@ position = Vector2(168, 448)
 position = Vector2(577, 575)
 
 [node name="Interact" parent="." instance=ExtResource("8_ffl4b")]
-position = Vector2(1046, 403)
+position = Vector2(860, 335)
 
 [connection signal="body_entered" from="cake" to="." method="_on_cake_body_entered"]
