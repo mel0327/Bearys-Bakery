@@ -19,6 +19,7 @@ func end_dialogue():
 	for connection in dialogue_finished.get_connections():
 		print(connection)
 	emit_signal("dialogue_finished")
+	get_tree().change_scene_to_file("res://Scenes/ending_screen.tscn")
 
 
 	queue_free()

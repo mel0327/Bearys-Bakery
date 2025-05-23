@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bisscd2csms35"]
+[gd_scene load_steps=7 format=3 uid="uid://bisscd2csms35"]
 
 [ext_resource type="PackedScene" uid="uid://d4h3qwfkog4s6" path="res://Scenes/player.tscn" id="1_3eobl"]
-[ext_resource type="PackedScene" uid="uid://bxu755suyt7ne" path="res://Scenes/hammy.tscn" id="2_3nlxo"]
 [ext_resource type="PackedScene" uid="uid://b0rn15jgidqy1" path="res://Scenes/interact.tscn" id="3_sqejq"]
 [ext_resource type="PackedScene" uid="uid://btiq01ha34f8c" path="res://Scenes/interact_2.tscn" id="4_lkgjs"]
+[ext_resource type="PackedScene" uid="uid://q0in37xtjbdw" path="res://Scenes/beary.tscn" id="5_g3s7c"]
 [ext_resource type="PackedScene" uid="uid://cu01kdas7pjc8" path="res://Scenes/interact_3.tscn" id="5_sydet"]
+[ext_resource type="PackedScene" uid="uid://codymmucr231j" path="res://Scenes/end_instantiate.tscn" id="6_ldl8v"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,11 +16,13 @@ collision_mask = 1
 [node name="Interact" parent="." instance=ExtResource("3_sqejq")]
 position = Vector2(34, 317)
 
-[node name="Hammy" parent="." instance=ExtResource("2_3nlxo")]
-position = Vector2(795, 88)
-
 [node name="Interact2" parent="." instance=ExtResource("4_lkgjs")]
 position = Vector2(110, 618)
 
 [node name="Interact3" parent="." instance=ExtResource("5_sydet")]
 position = Vector2(438, 694)
+
+[node name="Beary" parent="." instance=ExtResource("5_g3s7c")]
+position = Vector2(658, 313)
+
+[node name="Node2D" parent="." instance=ExtResource("6_ldl8v")]
