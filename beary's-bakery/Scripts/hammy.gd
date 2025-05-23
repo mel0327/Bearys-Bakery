@@ -27,6 +27,8 @@ func _on_hit_box_body_entered(body: Node) -> void:
 		_attack_sound.play()
 
 func die():
+	Global.dead_mobs[name] = true  
+	queue_free()
 	if _hit_box:
 		_hit_box.queue_free()
 	
